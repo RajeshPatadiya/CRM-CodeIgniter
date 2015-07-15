@@ -1,0 +1,30 @@
+<html> 
+	<head> 
+	<title>MON FORMULAIRE</title> 
+	</head> 
+
+	<body> 
+		<?php echo validation_errors(); ?> 
+		<?php echo form_open('form'); ?> 
+        <h5>idclient</h5> 
+		
+		<?php echo form_error('idclient'); ?> 
+		<input type="text" name="nom" value="<?php echo set_value('idclient'); ?>" size="50" />
+		<h5>nom</h5> 
+		
+		<?php echo form_error('nom'); ?> 
+		<input type="text" name="nom" value="<?php echo set_value('nom'); ?>" size="50" /> 
+		<h5>Prenom</h5> 
+		<?php echo form_error('Prenom'); ?> 
+		<input type="text" name="Prenom" value="<?php echo set_value('Prenom'); ?>" size="50" /> 
+		<h5>adresse </h5> 
+		<?php echo form_error('adresse'); ?> 
+		<input type="text" name="adresse" value="<?php echo set_value('adresse'); ?>" size="50" /> 
+		<h5>numero</h5> 
+		<?php echo form_error('numero'); ?> 
+		<input type="text" name="numero" value="<?php echo set_value('numero'); ?>" size="50" /> 
+		<div><input type="submit" value="Submit" /></div> 
+		
+		</form> 
+	</body> 
+</html> 
