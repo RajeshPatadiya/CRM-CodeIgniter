@@ -6,32 +6,26 @@
 </head>
 
 <body>
-<form name="form1" method="POST" action="ajouter1.php">
-id: <input name="id" id="idclient" type="text"  /> <br />
-Nom : <input name="nom" type="text" id="nomclient" /> <br />
+<form name="form1" method="POST" action="modifier1.php">
+choix_id: <input name="id" type="text" id="idclient" /> <br />
+Nom : <input name="nom" type="text" id="nomclient"  /> <br />
 Prenom : <input name="prenom" type="text" id="prenomclient" /> <br />
 Adresse : <input name="adresse" type="text" id="adresseclient" /> <br />
-Numero  : <input name="numero" type="text" id="numeroclient" /> <br />
-<input id= "submit" name="ajouter" type="button" value="ajouter" />
+Numero  : <input name="numero" type="text" id="numeroclient"  /> <br />
+<input name="modifier" type="submit" value="modifier"  />
 <input name="annuler" type="reset" value="annuler" />
 </form>
 <script type="text/javascript" src="jquery-2.1.3.min.js"></script>
 <script language="javascript">
-
-function showAlert(){
-   alert("Test");
-}
-
 $("#submit").click(function(){
 	var idc= $("#idclient").val();
 	var nomc= $("#nomclient").val();
 	var prenomc= $("#prenomclient").val();
 	var adressec= $("#adresseclient").val();
 	var numeroc= $("#numeroclient").val();
-	//var urlStr = "ajouter1.php?id="+id+"&nom="+nom+"&prenom="+prenom+"&adresse="+adresse+"&numero="+numero;
 	$.ajax({
 		type: "POST",
-		url: "ajouter1.php",
+		url: "modifier1.php",
 		data: {id:idc,nom:nomc,prenom:prenomc,adresse:adressec,numero:numeroc},
 		success: function(resp)
 		{
@@ -43,7 +37,6 @@ $("#submit").click(function(){
 		}
 	});
 });
-
 </script>
 </body>
 </html>

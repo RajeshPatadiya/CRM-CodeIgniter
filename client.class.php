@@ -71,11 +71,11 @@ $connexion = new connexion('localhost', 'client', 'root', '');
       mysql_query($sql);
 	 if ( mysql_error())
 	 {
-		 $resp=" client non ajouter:".mysql_error();
+		 $resp=" client non ajouté:".mysql_error();
 	 }
 	 else 
 	
-    $resp="client ajouté : ";
+    $resp="client ajouté  ";
     
 return $resp;
 }
@@ -148,18 +148,21 @@ $tableau[] = $cl;
 public function modifierClient ()
 {
 $connexion = new connexion('localhost', 'client', 'root', '');
+ $resp="";
 	
 $req="update client set nom='$this->nom' , prenom='$this->prenom' , adresse='$this->adresse' , tel=$this->tel where id_client=$this->id_client ";
 $result = mysql_query($req);
  
   if ( mysql_error())
 	 {
-		 echo " erreur de modification:".mysql_error();
+		  $resp=" erreur de modification:".mysql_error();
 	 }
 	 else 
+	 {
 	
-    echo "modification a été correctement effectuée : " . $req;
- 
+    $resp="modification a été correctement effectuée " ;
+	 }
+	 return $resp;
  
 }
 /************************************************************/

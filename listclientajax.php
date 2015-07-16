@@ -6,15 +6,29 @@
 </head>
 
 <body>
-<table> 
-<tr> 
-<th>ID</th> 
-<th>nom</th> 
-<th>prenom</th> 
-<th>adresse</th>
-<th>tel</th>
-</tr> 
-
+<script type="text/javascript" src="jquery-2.1.3.min.js"></script>
+<script language="javascript">
+$("#submit").click(function(){
+	var idc= $("#idclient").val();
+	var nomc= $("#nomclient").val();
+	var prenomc= $("#prenomclient").val();
+	var adressec= $("#adresseclient").val();
+	var numeroc= $("#numeroclient").val();
+	$.ajax({
+		type: "POST",
+		url: "modifier1.php",
+		data: {id:idc,nom:nomc,prenom:prenomc,adresse:adressec,numero:numeroc},
+		success: function(resp)
+		{
+			alert(resp);
+		},
+		error: function(x)
+		{
+			alert( "Erreur: " + x);
+		}
+	});
+});
+</script>
 <?php
 require "connexion.class.php";
 require "client.class.php";
@@ -23,8 +37,6 @@ $tableau =$client->listeClient();
 
 
 foreach($tableau as $val) 
-//$size = count ($ligne);
-// for ($i=0;$i<=$size;$i++)
 { 
 ?> 
 <tr> 
@@ -36,6 +48,5 @@ foreach($tableau as $val)
 <tr><?php 
 } 
 ?>
-</table>
 </body>
 </html>

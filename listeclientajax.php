@@ -20,22 +20,35 @@ require "connexion.class.php";
 require "client.class.php";
 $client =new client();
 $tableau =$client->listeClient();
-
-
+?>
+<script type="text/javascript" src="jquery-2.1.3.min.js"></script>
+<script language="javascript">
+$("#submit").click(function(){
+	$.ajax({
+		type: "POST",
+		url: "listeclientajax.php",
+		success: function(tableau)
+		{
+<?php
 foreach($tableau as $val) 
-//$size = count ($ligne);
-// for ($i=0;$i<=$size;$i++)
 { 
-?> 
-<tr> 
-<td><?php echo $val->getId().'<br/>';?></td> 
-<td><?php echo $val->getNom().'<br/>';?></td> 
-<td><?php echo $val->getPrenom().'<br/>';?></td> 
-<td><?php echo $val->getAdresse().'<br/>';?></td> 
-<td><?php echo $val->getTel().'<br/>';?></td>
-<tr><?php 
+echo $val->getId().'<br/>'; 
+echo $val->getNom().'<br/>'; 
+echo $val->getPrenom().'<br/>'; 
+echo $val->getAdresse().'<br/>'; 
+echo $val->getTel().'<br/>';
+ 
 } 
 ?>
-</table>
+
+		},
+		error: function(x)
+		{
+			alert( "Erreur: " + x);
+		}
+	});
+});
+</script>
+
 </body>
 </html>
