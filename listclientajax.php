@@ -6,29 +6,15 @@
 </head>
 
 <body>
-<script type="text/javascript" src="jquery-2.1.3.min.js"></script>
-<script language="javascript">
-$("#submit").click(function(){
-	var idc= $("#idclient").val();
-	var nomc= $("#nomclient").val();
-	var prenomc= $("#prenomclient").val();
-	var adressec= $("#adresseclient").val();
-	var numeroc= $("#numeroclient").val();
-	$.ajax({
-		type: "POST",
-		url: "modifier1.php",
-		data: {id:idc,nom:nomc,prenom:prenomc,adresse:adressec,numero:numeroc},
-		success: function(resp)
-		{
-			alert(resp);
-		},
-		error: function(x)
-		{
-			alert( "Erreur: " + x);
-		}
-	});
-});
-</script>
+<table> 
+<tr> 
+<th>ID</th> 
+<th>nom</th> 
+<th>prenom</th> 
+<th>adresse</th>
+<th>tel</th>
+</tr> 
+
 <?php
 require "connexion.class.php";
 require "client.class.php";
@@ -48,5 +34,27 @@ foreach($tableau as $val)
 <tr><?php 
 } 
 ?>
+<script type="text/javascript" src="jquery-2.1.3.min.js"></script>
+<script language="javascript">
+$(document).load(function(){
+	
+	$.ajax({
+		type: "POST",
+		url: "listclientajax.php",
+		
+		success: function(resp)
+		{
+			alert(resp);
+		},
+		error: function(x)
+		{
+			alert( "Erreur: " + x);
+		}
+	});
+});
+</script>
+</tr>
+</tr>
+</table>
 </body>
 </html>
