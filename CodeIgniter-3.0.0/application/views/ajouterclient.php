@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Document sans titre</title>
+</head>
+
+<body>
+<form name="form1" method="POST" >
+id: <input name="id" type="text"  /> <br />
+Nom : <input name="nom" type="text"  /> <br />
+Prenom : <input name="prenom" type="text"  /> <br />
+Adresse : <input name="adresse" type="text"  /> <br />
+Numero  : <input name="numero" type="text"  /> <br />
+code_TVA:  <input name="code_tva" type="text"  /> <br />
+Matricule fiscale : <input name="matricule_fiscale" type="text"  /> <br />
+<input name="ajouter" type="submit" value="ajouter"  />
+<input name="annuler" type="reset" value="annuler" />
+</form>
+</body>
+</html>

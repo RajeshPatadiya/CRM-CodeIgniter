@@ -6,7 +6,8 @@
 </head>
 
 <body>
-<form name="form1" method="POST" >
+
+<form accept-charset="utf-8"  method="POST" action="form/valid_form">
 id: <input name="id_client" type="text" id="id_client" /> <br />
 Nom : <input name="nom" type="text" id="nom" /> <br />
 Prenom : <input name="prenom" type="text" id="prenom" /> <br />
