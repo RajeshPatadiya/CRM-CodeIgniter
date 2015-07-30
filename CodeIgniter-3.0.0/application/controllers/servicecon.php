@@ -6,6 +6,29 @@ class SERVICECON extends CI_Controller {
  {
    parent::__construct();
  }
+ 
+function listedeService()
+   {
+	    $this->load->model('service');
+
+    $data['results'] = $this->service->listeService(); 
+
+   
+    $this->load->view('serviceliste', $data);
+  
+	
+	    $this->load->model('service');
+	    $data['serviceliste'] = $this->service->listeService();
+    $this->load->view('serviceliste', $data);
+	  /* $this->load->model('service');
+	   $tab= $this->service->listeService();
+	   echo $tab;*/
+	   
+   }
+
+
+
+
 
  function ajoutService()
  {
@@ -43,13 +66,7 @@ class SERVICECON extends CI_Controller {
 	 $this->service->supprimerService($id_service);
 
    }
-   function listedeService()
-   {
-	   $this->load->model('service');
-	   $tab= $this->service->listeService();
-	   echo $tab;
-	   
-   }
+   
 
 }
 

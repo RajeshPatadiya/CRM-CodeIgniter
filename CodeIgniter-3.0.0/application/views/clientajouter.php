@@ -9,7 +9,7 @@
 	<meta name="author" content="solutionportal">
 	<!-- <base href="/"> -->
 
-	<title>Ajouter un Service</title>
+	<title>Ajouter un Client</title>
 	
 	<!-- Icons -->
 	<link rel="stylesheet" href="public/fonts/ionicons/css/ionicons.min.css">

@@ -196,7 +196,7 @@
 									
 										
 										<div class="clearfix right">
-											<input class="btn btn-primary mr5" name="ajouter" value="modifier "type="submit"></input>
+											<input class="btn btn-primary mr5" name="modifier" value="modifier "type="submit"></input>
 											<button class="btn btn-default">Annuler</button>
 										</div>
 									</form>

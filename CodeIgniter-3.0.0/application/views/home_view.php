@@ -9,7 +9,7 @@
 	<meta name="author" content="solutionportal">
 	<!-- <base href="/"> -->
 
-	<title>C.M.P</title>
+	<title>C.R.M</title>
 	
 	<!-- Icons -->
 	<link rel="stylesheet" href="public/fonts/ionicons/css/ionicons.min.css">
@@ -400,10 +400,11 @@
 							<i class="arrow ion-chevron-left"></i>
 						</a>
 						<ul class="inner-drop list-unstyled">
-								<li><a href="application\views\devisajouter.php">Ajouter un Devis</a></li>
-							<li><a href="application\views\devisliste.php">Liste de Devis</a></li>
-							<li><a href="application\views\devismodifier.php">Modification de Devis</a></li>
-							<li><a href="application\views\devissupprimer.php">suppression de Devis</a></li>
+								<li><a href="deviscont/ajoutDevis">Ajouter un Devis</a></li>
+							<li><a href="deviscont/listedeDevis">Liste de Devis</a></li>
+							<li><a href="deviscont/modifierDeviscont">Modification de Devis</a></li>
+							<li><a href="deviscont/supprimerDevis">suppression de Devis</a></li>
+                            <li><a href="non">imprimer devis (P.D.F)</a></li>
 						</ul>
 					</li>
 					<li>
@@ -413,10 +414,11 @@
 							<i class="arrow ion-chevron-left"></i>
 						</a>
 						<ul class="inner-drop list-unstyled">
-							<li><a href="application\views\factureajouter.php">Ajouter un Facture</a></li>
-							<li><a href="application\views\factureliste.php">Liste de Facture</a></li>
-							<li><a href="application\views\facturemodifier.php">Modification de Facture</a></li>
-							<li><a href="application\views\facturesupprimer.php">suppression de Facture</a></li>
+							<li><a href="facturecont/ajoutFacture">Ajouter un Facture</a></li>
+							<li><a href="facturecont/listedeFacture">Liste de Facture</a></li>
+							<li><a href="facturecont/modifierFacturecont">Modification de Facture</a></li>
+							<li><a href="facturecont/supprimerFacture">suppression de Facture</a></li>
+                            <li><a href="non">imprimer Facture (P.D.F)</a></li>
 						</ul>
 					</li>
 					<li>
@@ -425,10 +427,10 @@
 							<span class="text">Depenses</span>
 						</a>
                         <ul class="inner-drop list-unstyled">
-							<li><a href="application\views\depenseajouter.php">Ajouter un Depense</a></li>
-							<li><a href="application\views\depenseliste.php">Liste de Depense</a></li>
-							<li><a href="application\views\depensemodifier.php">Modification de depense</a></li>
-							<li><a href="application\views\dependesupprimer.php">suppression de depense</a></li>
+							<li><a href="non">Gestion de Depense</a></li>
+							<li><a href="non">Rapport Depense/recette</a></li>
+							
+						
 						</ul>
 					</li>
 					

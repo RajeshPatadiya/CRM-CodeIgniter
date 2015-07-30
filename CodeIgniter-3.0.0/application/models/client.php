@@ -1,6 +1,57 @@
 <?php
 class CLIENT extends CI_Model
 {
+	
+	
+	public function listeClient()
+	{
+		  $results = array();
+    $this->db->select('id_client, nom, prenom, adresse, numero ,code_tva,matricule_fiscale');
+    $this->db->from('client');
+
+    $query = $this->db->get();
+
+    if($query->num_rows() > 0) {
+        $results = $query->result();
+    }
+    return $results;
+		
+	/*	$this->load->database();
+		 $this->db->select('*');
+    $this->db->from('client');
+   
+    return $this->db->get()->result();
+	/*$query = $this->db->get('client');
+
+$client = array();
+
+if ($query->num_rows() > 0)
+{
+	$client = $query->result_array();
+}
+		 /* $query = $this->db->query("SELECT * FROM client;");
+
+    return $query->result_array();;*/
+		
+	/*	//$query = $this->db->query("SELECT * FROM SERVICE");
+		$query = $this->db->get('client');
+		//$ligne = array();
+
+if ($ligne=$query->num_rows() > 0)
+{
+   $row = $query->row_array(); 
+
+  $id_client = $ligne['id_client']; 
+  $nom = $ligne['nom']; 
+  $prenom = $ligne['prenom']; 
+   $adresse = $ligne['adresse']; 
+    $numero = $ligne['numero'];
+	 $code_tva = $ligne['code_tva'];
+	  $matricule_fiscale = $ligne['matricule_fiscale']; 
+}
+
+ return $ligne;*/
+}
 	public function ajouterClient($nom,$prenom,$adresse,$numero,$code_tva,$matricule_fiscale)
 	{
 		$this->load->database();
@@ -48,31 +99,6 @@ $this->db->delete('client');
 	}
 	
 
-	
-	public function listeClient()
-	{
-		
-		$this->load->database();
-		
-		//$query = $this->db->query("SELECT * FROM SERVICE");
-		$query = $this->db->get('client');
-		//$ligne = array();
-
-if ($ligne=$query->num_rows() > 0)
-{
-   $row = $query->row_array(); 
-
-  $id_client = $ligne['id_client']; 
-  $nom = $ligne['nom']; 
-  $prenom = $ligne['prenom']; 
-   $adresse = $ligne['adresse']; 
-    $numero = $ligne['numero'];
-	 $code_tva = $ligne['code_tva'];
-	  $matricule_fiscale = $ligne['matricule_fiscale']; 
-}
-
- return $ligne;
-}
 
 	
 		/*$this->load->database();

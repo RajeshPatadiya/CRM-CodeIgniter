@@ -9,7 +9,7 @@
 	<meta name="author" content="solutionportal">
 	<!-- <base href="/"> -->
 
-	<title>Ajouter un Service</title>
+	<title>Supprimer un Client</title>
 	
 	<!-- Icons -->
 	<link rel="stylesheet" href="public/fonts/ionicons/css/ionicons.min.css">
@@ -152,7 +152,7 @@
 										<div class="form-group">
 											<label class="col-md-3 control-label">id_client</label>
 											<div class="col-md-9">
-												<input type="text" class="form-control" name="id_service">
+												<input type="text" class="form-control" name="id_client">
 											</div>
 										</div>
 

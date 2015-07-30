@@ -6,6 +6,35 @@ class CLIENTCONT extends CI_Controller {
  {
    parent::__construct();
  }
+ 
+  function listedeClient()
+   {
+	     $this->load->model('client');
+
+    $data['results'] = $this->client->listeClient(); 
+
+   
+    $this->load->view('clientliste', $data);
+  
+	
+	    $this->load->model('client');
+	    $data['clientliste'] = $this->client->listeClient();
+    $this->load->view('clientliste', $data);
+	   
+	 /*  $this->load->model('client');
+    $data['liste']=$this->client->listeClient();
+    $this->load->view('clientliste', $data); */
+	
+	   /*$this->load->model('client');
+	    $data['liste_client'] = $this->client->listeClient();
+
+    $this->load->view('clientliste', $data);*/
+
+	  /* $this->load->model('client');
+	   $tab= $this->client->listeClient();
+	   echo $tab;*/
+	   
+   }
 
  function ajoutClient()
  {
@@ -53,13 +82,7 @@ class CLIENTCONT extends CI_Controller {
 
    }
    
-   function listedeClient()
-   {
-	   $this->load->model('client');
-	   $tab= $this->client->listeClient();
-	   echo $tab;
-	   
-   }
+  
 
 }
 
