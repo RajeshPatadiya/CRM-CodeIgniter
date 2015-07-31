@@ -19,7 +19,7 @@ class CLIENTCONT extends CI_Controller {
 	
 	    $this->load->model('client');
 	    $data['clientliste'] = $this->client->listeClient();
-    $this->load->view('clientliste', $data);
+          $this->load->view('clientliste', $data);
 	   
 	 /*  $this->load->model('client');
     $data['liste']=$this->client->listeClient();

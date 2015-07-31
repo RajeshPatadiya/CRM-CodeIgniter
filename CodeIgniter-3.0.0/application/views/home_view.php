@@ -13,9 +13,14 @@
 	
 	<!-- Icons -->
 	<link rel="stylesheet" href="public/fonts/ionicons/css/ionicons.min.css">
+    <link href="<?php echo base_url('public/fonts/ionicons/css/ionicons.min.css')?>" rel="stylesheet">
+    <link href="<?php echo base_url('public/fonts/font-awesome/css/font-awesome.min.css')?>" rel="stylesheet">
 	<link rel="stylesheet" href="public/fonts/font-awesome/css/font-awesome.min.css">
 
 	<!-- Plugins -->
+    <link href="<?php echo base_url('public/styles/plugins/c3.css')?>" rel="stylesheet">
+    <link href="<?php echo base_url('public/styles/plugins/waves.css')?>" rel="stylesheet">
+    <link href="<?php echo base_url('public/styles/plugins/perfect-scrollbar.css')?>" rel="stylesheet">
 	<link rel="stylesheet" href="public/styles/plugins/c3.css">
 	<link rel="stylesheet" href="public/styles/plugins/waves.css">
 	<link rel="stylesheet" href="public/styles/plugins/perfect-scrollbar.css">
@@ -23,9 +28,11 @@
 	
 	<!-- Css/Less Stylesheets -->
 	<!-- build:css styles/bootstrap.min.css -->
+    <link href="<?php echo base_url('public/styles/vendors/bootstrap.min.css')?>" rel="stylesheet">
 	<link rel="stylesheet" href="public/styles/vendors/bootstrap.min.css">
 	<!-- /build -->
 	<!-- build:css styles/main.min.css -->
+    <link href="<?php echo base_url('public/styles/main.less')?>" rel="stylesheet">
 	<link rel="stylesheet/less" href="public/styles/main.less">	
 	<!-- /build -->
 
@@ -128,7 +135,8 @@
 			<!-- profile drop -->
 			<li class="profile-drop hidden-xs dropdown">
 				<a href="javascript:;" data-toggle="dropdown">
-					<img src="public/images/admin.jpg" alt="admin-pic">
+                 
+					<img src="<?php echo base_url('public/images/admin.jpg')?>" alt="admin-pic">
 				</a>
 				<ul class="dropdown-menu dropdown-menu-right">
 					<li><a href="javascript:;"><span class="ion ion-person">&nbsp;&nbsp;</span>Profile</a></li>
@@ -159,7 +167,8 @@
 							<div class="chat-tab tab clearfix">
 								<h5 class="title mt0 mb20">Online</h5>
 								<div class="user-container mb15">
-									<img src="public/images/sample/1.jpg" alt="">
+                                <img src="<?php echo base_url('public/images/sample/1.jpg')?>" alt="">
+									
 									<div class="desc">
 										<p class="mb0">John Wick</p>
 										<p class="xsmall"><span class="ion ion-location"></span>&nbsp;San Franciso, USA</p>
@@ -169,7 +178,8 @@
 								</div>
 
 								<div class="user-container mb15">
-									<img src="public/images/sample/2.jpg" alt="">
+                                <img src="<?php echo base_url('public/images/sample/2.jpg')?>" alt="">
+									
 									<div class="desc">
 										<p class="mb0">George K.</p>
 										<p class="xsmall"><span class="ion ion-location"></span>&nbsp;California, USA</p>
@@ -178,7 +188,8 @@
 								</div>
 
 								<div class="user-container mb15">
-									<img src="public/images/sample/3.jpg" alt="">
+                                 <img src="<?php echo base_url('public/images/sample/3.jpg')?>" alt="">
+									
 									<div class="desc">
 										<p class="mb0">Shello Dse.</p>
 										<p class="xsmall"><span class="ion ion-location"></span>&nbsp;Berlin, Germany</p>
@@ -187,7 +198,8 @@
 								</div>
 
 								<div class="user-container mb15">
-									<img src="public/images/sample/4.jpg" alt="">
+                                <img src="<?php echo base_url('public/images/sample/4.jpg')?>" alt="">
+									
 									<div class="desc">
 										<p class="mb0">Lucas Tower</p>
 										<p class="xsmall"><span class="ion ion-location"></span>&nbsp;Paris, France</p>
@@ -196,7 +208,8 @@
 								</div>
 
 								<div class="user-container mb15">
-									<img src="public/images/sample/5.jpg" alt="">
+                                <img src="<?php echo base_url('public/images/sample/5.jpg')?>" alt="">
+									
 									<div class="desc">
 										<p class="mb0">Hey Win</p>
 										<p class="xsmall"><span class="ion ion-location"></span>&nbsp;Hongkong, China</p>
@@ -205,7 +218,8 @@
 								</div>
 
 								<div class="user-container mb15">
-									<img src="public/images/sample/6.jpg" alt="">
+                                <img src="<?php echo base_url('public/images/sample/6.jpg')?>" alt="">
+									
 									<div class="desc">
 										<p class="mb0">Kelvin L.</p>
 										<p class="xsmall"><span class="ion ion-location"></span>&nbsp;Moscow, Russia</p>
@@ -216,7 +230,8 @@
 								<h5 class="title mt0 mb20">Offline</h5>
 
 								<div class="user-container mb15">
-									<img src="public/images/sample/7.jpg" alt="">
+                                <img src="<?php echo base_url('public/images/sample/7.jpg')?>" alt="">
+									
 									<div class="desc">
 										<p class="mb0">Martin Xx.</p>
 										<p class="xsmall"><span class="ion ion-location"></span>&nbsp;xxx, yyy</p>
@@ -225,7 +240,8 @@
 								</div>
 
 								<div class="user-container mb15">
-									<img src="public/images/sample/2.jpg" alt="">
+                                <img src="<?php echo base_url('public/images/sample/2.jpg')?>" alt="">
+									
 									<div class="desc">
 										<p class="mb0">Lorem Ipsum</p>
 										<p class="xsmall"><span class="ion ion-location"></span>&nbsp;Virginia, USA</p>
@@ -340,7 +356,8 @@
 
 			<nav class="site-nav clearfix" role="navigation">
 				<div class="profile clearfix mb15">
-					<img src="public/images/admin.jpg" alt="admin">
+                <img src="<?php echo base_url('public/images/admin.jpg')?>" alt="admin">
+					
 					<div class="group">
 						<h5 class="name">admin</h5>
 						<small class="desig text-uppercase">expert4dev</small>
@@ -922,22 +939,45 @@
 
 	<!-- Dev only -->
 	<!-- build:remove -->
+    <link href="<?php echo base_url('public/scripts/dev/less.min.js')?>" rel="stylesheet">
 	<script src="public/scripts/dev/less.min.js"></script>	
 	<!-- /build -->
 
 	<!-- Vendors -->
 	<!-- build:js scripts/vendors.js -->
+    <link href="<?php echo base_url('public/scripts/vendors/jquery.min.js')?>" rel="stylesheet">
+    <link href="<?php echo base_url('public/scripts/vendors/bootstrap.min.js')?>" rel="stylesheet">
 	<script src="public/scripts/vendors/jquery.min.js"></script> 
 	<script src="public/scripts/vendors/bootstrap.min.js"></script>
 	<!-- /build -->
+     <link href="<?php echo base_url('public/scripts/plugins/d3.min.js')?>" rel="stylesheet">
+      <link href="<?php echo base_url('public/scripts/plugins/c3.min.js')?>" rel="stylesheet">
+       <link href="<?php echo base_url('public/scripts/plugins/screenfull.js')?>" rel="stylesheet">
+       
+        <link href="<?php echo base_url('public/scripts/plugins/perfect-scrollbar.min.js')?>" rel="stylesheet">
+        
+         <link href="<?php echo base_url('public/scripts/plugins/waves.min.js')?>" rel="stylesheet">
+         
+          <link href="<?php echo base_url('public/scripts/plugins/jquery.sparkline.min.js')?>" rel="stylesheet">
+          
+           <link href="<?php echo base_url('public/scripts/plugins/jquery.easypiechart.min.js')?>" rel="stylesheet">
+            <link href="<?php echo base_url('public/scripts/plugins/bootstrap-rating.min.js')?>" rel="stylesheet">
+             <link href="<?php echo base_url('public/scripts/app.js')?>" rel="stylesheet">
+              <link href="<?php echo base_url('public/scripts/index.init.js')?>" rel="stylesheet">
+    
 	<script src="public/scripts/plugins/d3.min.js"></script>
 	<script src="public/scripts/plugins/c3.min.js"></script>
 	<script src="public/scripts/plugins/screenfull.js"></script>
 	<script src="public/scripts/plugins/perfect-scrollbar.min.js"></script>
+    
 	<script src="public/scripts/plugins/waves.min.js"></script>
+    
 	<script src="public/scripts/plugins/jquery.sparkline.min.js"></script>
+    
 	<script src="public/scripts/plugins/jquery.easypiechart.min.js"></script>
+    
 	<script src="public/scripts/plugins/bootstrap-rating.min.js"></script>
+    
 	<script src="public/scripts/app.js"></script>
 	<script src="public/scripts/index.init.js"></script>
 

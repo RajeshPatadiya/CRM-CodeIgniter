@@ -12,23 +12,34 @@
 	<title>Ajouter un Client</title>
 	
 	<!-- Icons -->
+      <link href="<?php echo base_url('public/fonts/ionicons/css/ionicons.min.css')?>" rel="stylesheet">
+        <link href="<?php echo base_url('public/fonts/font-awesome/css/font-awesome.min.css')?>" rel="stylesheet">
 	<link rel="stylesheet" href="public/fonts/ionicons/css/ionicons.min.css">
 	<link rel="stylesheet" href="public/fonts/font-awesome/css/font-awesome.min.css">
 
 	<!-- Plugins -->
+    <link href="<?php echo base_url('public/styles/plugins/waves.css')?>" rel="stylesheet">
 	<link rel="stylesheet" href="public/styles/plugins/waves.css">
+    <link href="<?php echo base_url('public/styles/plugins/perfect-scrollbar.css')?>" rel="stylesheet">
 	<link rel="stylesheet" href="public/styles/plugins/perfect-scrollbar.css">
+        <link href="<?php echo base_url('public/styles/plugins/select2.css')?>" rel="stylesheet">
 	<link rel="stylesheet" href="public/styles/plugins/select2.css">
+            <link href="<?php echo base_url('public/styles/plugins/bootstrap-colorpicker.css')?>" rel="stylesheet">
 	<link rel="stylesheet" href="public/styles/plugins/bootstrap-colorpicker.css">
+     <link href="<?php echo base_url('public/styles/plugins/bootstrap-slider.css')?>" rel="stylesheet">
 	<link rel="stylesheet" href="public/styles/plugins/bootstrap-slider.css">
+    <link href="<?php echo base_url('public/styles/plugins/bootstrap-datepicker.css')?>" rel="stylesheet">
 	<link rel="stylesheet" href="public/styles/plugins/bootstrap-datepicker.css">
+    <link href="<?php echo base_url('public/styles/plugins/summernote.css')?>" rel="stylesheet">
 	<link rel="stylesheet" href="public/styles/plugins/summernote.css">
 	
 	<!-- Css/Less Stylesheets -->
 	<!-- build:css styles/bootstrap.min.css -->
+    <link href="<?php echo base_url('public/styles/vendors/bootstrap.min.css')?>" rel="stylesheet"> 
 	<link rel="stylesheet" href="styles/vendors/bootstrap.min.css">
 	<!-- /build -->
 	<!-- build:css styles/main.min.css -->
+    <link href="<?php echo base_url('public/stylesheet/less" href="styles/main.less')?>" rel="stylesheet">
 	<link rel="stylesheet/less" href="styles/main.less">	
 	<!-- /build -->
 
@@ -152,7 +163,7 @@
 										<div class="form-group">
 											<label class="col-md-3 control-label">Nom :</label>
 											<div class="col-md-9">
-												<input type="text" class="form-control" name="nom">
+												<input type="text" class="form-control" name="nom" id="nom">
 											</div>
 										</div>
 
@@ -160,38 +171,38 @@
 										<div class="form-group">
 											<label class="col-md-3 control-label"> Prenom : </label>
 											<div class="col-md-9">
-												<input type="text" class="form-control"  name="prenom">
+												<input type="text" class="form-control"  name="prenom" id="prenom">
 											</div>
 										</div> 
                                         <div class="form-group">
 											<label class="col-md-3 control-label">Adresse :</label>
 											<div class="col-md-9">
-												<input type="text" class="form-control" name="adresse">
+												<input type="text" class="form-control" name="adresse" id="adresse">
 											</div>
 										</div>
                                         <div class="form-group">
 											<label class="col-md-3 control-label"> Numero :</label>
 											<div class="col-md-9">
-												<input type="text" class="form-control" name="numero">
+												<input type="text" class="form-control" name="numero" id="numero">
 											</div>
 										</div>
                                          <div class="form-group">
 											<label class="col-md-3 control-label"> code TVA:</label>
 											<div class="col-md-9">
-												<input type="text" class="form-control" name="code_tva">
+												<input type="text" class="form-control" name="code_tva" id="code_tva">
 											</div>
 										</div>
                                          <div class="form-group">
 											<label class="col-md-3 control-label"> Matricule fiscale:</label>
 											<div class="col-md-9">
-												<input type="text" class="form-control" name="matricule_fiscale">
+												<input type="text" class="form-control" name="matricule_fiscale" id="matricule_fiscale">
 											</div>
 										</div>
 
 									
 										
 										<div class="clearfix right">
-											<input class="btn btn-primary mr5" name="ajouter" value="ajouter "type="submit"></input>
+											<input class="btn btn-primary mr5" name="ajouter" value="ajouter "type="submit" id="submit"></input>
 											<button class="btn btn-default">Annuler</button>
 										</div>
 									</form>
@@ -225,3 +236,35 @@
 	<script src="public/scripts/form-elements.init.js"></script>
 </body>
 </html>
+<script type="text/javascript" src="jquery-2.1.3.min.js"></script>
+<script language="javascript">
+
+function showAlert(){
+   alert("Test");
+}
+
+$("#submit").click(function(){
+	
+	
+	var nomc= $("#nom").val();
+	var prenomc= $("#prenom").val();
+	var adressec= $("#adresse").val();
+	var numeroc= $("#numero").val();
+	var code_tvac= $("#code_tva").val();
+	var matricule_fiscalec= $("#matricule_fiscale").val();
+	//var urlStr = "ajouter1.php?id="+id+"&nom="+nom+"&prenom="+prenom+"&adresse="+adresse+"&numero="+numero;
+	$.ajax({
+		type: "POST",
+		url: "clientcont/ajoutClient",
+		data: {nom:nom,prenom:prenom,adresse:adresse,numero:numero,code_tva:code_tva,matricule_fiscale:matricule_fiscale},
+		success: function(resp)
+		{
+			alert(resp);
+		},
+		error: function(x)
+		{
+			alert( "Erreur: " + x);
+		}
+	});
+});
+</script>

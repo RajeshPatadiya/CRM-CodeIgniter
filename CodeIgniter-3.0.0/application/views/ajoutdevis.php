@@ -12,6 +12,8 @@
 	<title>Ajouter un Service</title>
 	
 	<!-- Icons -->
+    <link href="<?php echo base_url('public/fonts/ionicons/css/ionicons.min.css')?>" rel="stylesheet">
+    <link href="<?php echo base_url('public/fonts/font-awesome/css/font-awesome.min.css')?>" rel="stylesheet">
 	<link rel="stylesheet" href="public/fonts/ionicons/css/ionicons.min.css">
 	<link rel="stylesheet" href="public/fonts/font-awesome/css/font-awesome.min.css">
 

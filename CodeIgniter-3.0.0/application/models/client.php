@@ -65,9 +65,30 @@ if ($ligne=$query->num_rows() > 0)
 		
 		
          $this->db->insert('client',$data); 
+		 
 
  
 	}
+	
+	// Show view Page
+public function index(){
+$this->load->view("clientajouter");
+}
+
+// This function call from AJAX
+public function user_data_submit() {
+$data = array(
+'nom' => $this->input->post('nom'),
+'prenom'=>$this->input->post('prenom'),
+'adresse'=>$this->input->post('adresse'),
+'numero'=>$this->input->post('numero'),
+'prix_tva'=>$this->input->post('prix_tva'),
+'matricule_fiscale'=>$this->input->post('matricule_fiscale')
+);
+
+//Either you can print value or you can send value to database
+echo json_encode($data);
+}
 	public function modifierClient($id_client,$nom,$prenom,$adresse,$numero,$code_tva,$matricule_fiscale)
 	{
           $this->load->database();

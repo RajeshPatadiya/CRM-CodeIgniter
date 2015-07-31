@@ -28,18 +28,24 @@
 	<title>Liste de factures </title>
 	
 	<!-- Icons -->
+     <link href="<?php echo base_url('public/fonts/ionicons/css/ionicons.min.css')?>" rel="stylesheet"> 
+     <link href="<?php echo base_url('public/font-awesome/css/font-awesome.min.css')?>" rel="stylesheet"> 
 	<link rel="stylesheet" href="fonts/ionicons/css/ionicons.min.css">
 	<link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
 
 	<!-- Plugins -->
+    <link href="<?php echo base_url('public/styles/plugins/waves.css')?>" rel="stylesheet"> 
+     <link href="<?php echo base_url('public/styles/plugins/perfect-scrollbar.css')?>" rel="stylesheet"> 
 	<link rel="stylesheet" href="styles/plugins/waves.css">
 	<link rel="stylesheet" href="styles/plugins/perfect-scrollbar.css">
 	
 	<!-- Css/Less Stylesheets -->
 	<!-- build:css styles/bootstrap.min.css -->
+    <link href="<?php echo base_url('public/styles/vendors/bootstrap.min.css')?>" rel="stylesheet"> 
 	<link rel="stylesheet" href="styles/vendors/bootstrap.min.css">
 	<!-- /build -->
 	<!-- build:css styles/main.min.css -->
+    <link href="<?php echo base_url('public/styles/main.less')?>" rel="stylesheet"> 
 	<link rel="stylesheet/less" href="styles/main.less">	
 	<!-- /build -->
 
