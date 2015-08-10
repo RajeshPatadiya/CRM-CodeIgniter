@@ -36,7 +36,7 @@ function listedeFacture()
 	 
 	  $this->load->view('ajoutfacture');
 	 
-	   
+	    $id_client=$this->input->post('id_client');
         $nom_facture=$this->input->post('nom_facture');
         $date_facture=$this->input->post('date_facture');
 		$remise=$this->input->post('remise');
@@ -44,7 +44,7 @@ function listedeFacture()
 		
             $this->load->model('facture');
     
-         $this->facture->ajouterFacture($nom_facture,$date_facture,$remise,$prix_tva);
+         $this->facture->ajouterFacture($id_client,$nom_facture,$date_facture,$remise,$prix_tva);
 
  }
   function modifierFacturecont()

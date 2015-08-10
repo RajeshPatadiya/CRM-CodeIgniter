@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,32 +9,32 @@
 	<meta name="author" content="solutionportal">
 	<!-- <base href="/"> -->
 
-	<title>Liste de clients</title>
+	<title>Liste de client</title>
 	
 	<!-- Icons -->
      <link href="<?php echo base_url('public/fonts/ionicons/css/ionicons.min.css')?>" rel="stylesheet">
-      <link href="<?php echo base_url('public/fonts/font-awesome/css/font-awesome.min.css')?>" rel="stylesheet">
-	<link rel="stylesheet" href="fonts/ionicons/css/ionicons.min.css">
-	<link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
+     <link href="<?php echo base_url('public/fonts/font-awesome/css/font-awesome.min.css')?>" rel="stylesheet">
 
+	
 	<!-- Plugins -->
     <link href="<?php echo base_url('public/styles/plugins/waves.css')?>" rel="stylesheet">
-      <link href="<?php echo base_url('public/styles/plugins/perfect-scrollbar.css')?>" rel="stylesheet">
-	<link rel="stylesheet" href="styles/plugins/waves.css">
-	<link rel="stylesheet" href="styles/plugins/perfect-scrollbar.css">
+     <link href="<?php echo base_url('public/styles/plugins/perfect-scrollbar.css')?>" rel="stylesheet">
+	
 	
 	<!-- Css/Less Stylesheets -->
 	<!-- build:css styles/bootstrap.min.css -->
     <link href="<?php echo base_url('public/styles/vendors/bootstrap.min.css')?>" rel="stylesheet">
-	<link rel="stylesheet" href="styles/vendors/bootstrap.min.css">
-	<!-- /build -->
-	<!-- build:css styles/main.min.css -->
-     <link href="<?php echo base_url('public/styles/main.less')?>" rel="stylesheet">
-	<link rel="stylesheet/less" href="styles/main.less">	
-	<!-- /build -->
-
 
 	
+	<!-- /build -->
+	<!-- build:css styles/main.min.css -->
+        <link href="<?php echo base_url('public/styles/main.less')?>" rel="stylesheet/less">
+
+	
+	<!-- /build -->
+
+
+	 
  	<link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,300' rel='stylesheet' type='text/css'>
 
 	<!-- Match Media polyfill for IE9 -->
@@ -504,13 +502,10 @@
 										<thead>
 											<tr>
 												<th class="col-lg-1"><button type="button" class="btn btn-default btn-sm fa fa-trash"></th>
-												<th>ID_Client</th>
-												<th>Nom</th>
-												<th>Prenom</th>
-												<th>Adresse</th>
-                                                <th>Numero</th>
-												<th>Prix_TVA</th>
-                                                <th>Matricule_Fiscale</th>
+												<th>Post</th>
+												<th>Author</th>
+												<th>Categories</th>
+												<th>Tags</th>
 												<th class="col-lg-2">Date</th>
 											</tr>
 										</thead>
@@ -521,25 +516,8 @@
 														<label><input type="checkbox"><span></span>
 														</label>
 													</div>
-                                                    <?php
- if( !empty($results) ) {
-    foreach($results as $row) {
-        echo '<tr>';
-        echo '<td>'.$row->id_client.'</td>';
-        echo '<td>'.$row->nom.'</td>';
-        echo '<td>'.$row->prenom.'</td>';
-        echo '<td>'.$row->adresse.'</td>';
-		 echo '<td>'.$row->numero.'</td>';
-        echo '<td>'.$row->code_tva.'</td>';
-		 echo '<td>'.$row->matricule_fiscale.'</td>';
-        
-        echo '</tr>';
-    }
-}
-?>
 												</td>
-                                                
-											 <?php	echo '<td>'.$row->id_client.'</td>';?>
+												<td>My First Blog</td>
 												<td>Johnny</td>
 												<td>Web Design</td>
 												<td>
@@ -760,22 +738,23 @@
 
 	<!-- Dev only -->
 	<!-- build:remove -->
-	<script src="<?php echo base_url('public/scripts/dev/less.min.js')?>"></script>	
+     <script src="<?php echo base_url('public/scripts/dev/less.min.js')?>"></script>	
+
 	<!-- /build -->
 
 	<!-- Vendors -->
 	<!-- build:js scripts/vendors.js -->
-	<script src="<?php echo base_url('public/scripts/vendors/jquery.min.js')?>"></script> 
-	<script src="<?php echo base_url('public/scripts/vendors/bootstrap.min.js')?>"></script>
+        <script src="<?php echo base_url('public/scripts/vendors/jquery.min.js')?>"></script>	
+        <script src="<?php echo base_url('public/scripts/vendors/bootstrap.min.js')?>"></script>	
+
 	<!-- /build -->
-
-<link href="<?php echo base_url('public/styles/main.less')?>" rel="stylesheet">
-	<script src="<?php echo base_url('public/scripts/plugins/screenfull.js')?>"></script>
-	<script src="<?php echo base_url('public/scripts/plugins/perfect-scrollbar.min.js')?>"></script>
-	<script src="<?php echo base_url('public/scripts/plugins/waves.min.js')?>"></script>
-	<script src="<?php echo base_url('public/scripts/plugins/jquery.dataTables.min.js')?>"></script>
-	<script src="<?php echo base_url('public/scripts/app.js')?>"></script>
-	<script src="<?php echo base_url('public/scripts/tables.init.js')?>"></script>
-
+ <script src="<?php echo base_url('public/scripts/plugins/screenfull.js')?>"></script>	
+ <script src="<?php echo base_url('public/scripts/plugins/perfect-scrollbar.min.js')?>"></script>
+<script src="<?php echo base_url('public/scripts/plugins/waves.min.js')?>"></script>	
+ <script src="<?php echo base_url('public/scripts/plugins/jquery.dataTables.min.js')?>"></script>
+	<script src="<?php echo base_url('public/scripts/app.js')?>"></script>	
+ <script src="<?php echo base_url('public/scripts/tables.init.js')?>"></script>
+	
+	
 </body>
 </html>

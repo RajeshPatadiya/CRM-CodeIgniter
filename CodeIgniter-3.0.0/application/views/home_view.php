@@ -9,36 +9,33 @@
 	<meta name="author" content="solutionportal">
 	<!-- <base href="/"> -->
 
-	<title>C.R.M</title>
+	<title>Materia - Admin Template</title>
 	
 	<!-- Icons -->
-	<link rel="stylesheet" href="public/fonts/ionicons/css/ionicons.min.css">
-    <link href="<?php echo base_url('public/fonts/ionicons/css/ionicons.min.css')?>" rel="stylesheet">
-    <link href="<?php echo base_url('public/fonts/font-awesome/css/font-awesome.min.css')?>" rel="stylesheet">
-	<link rel="stylesheet" href="public/fonts/font-awesome/css/font-awesome.min.css">
+       <link href="<?php echo base_url('public/fonts/ionicons/css/ionicons.min.css')?>" rel="stylesheet">
+     <link href="<?php echo base_url('public/fonts/font-awesome/css/font-awesome.min.css')?>" rel="stylesheet">
+	
 
 	<!-- Plugins -->
-    <link href="<?php echo base_url('public/styles/plugins/c3.css')?>" rel="stylesheet">
+     <link href="<?php echo base_url('public/styles/plugins/c3.css')?>" rel="stylesheet">
     <link href="<?php echo base_url('public/styles/plugins/waves.css')?>" rel="stylesheet">
     <link href="<?php echo base_url('public/styles/plugins/perfect-scrollbar.css')?>" rel="stylesheet">
-	<link rel="stylesheet" href="public/styles/plugins/c3.css">
-	<link rel="stylesheet" href="public/styles/plugins/waves.css">
-	<link rel="stylesheet" href="public/styles/plugins/perfect-scrollbar.css">
+	
 
 	
 	<!-- Css/Less Stylesheets -->
 	<!-- build:css styles/bootstrap.min.css -->
-    <link href="<?php echo base_url('public/styles/vendors/bootstrap.min.css')?>" rel="stylesheet">
-	<link rel="stylesheet" href="public/styles/vendors/bootstrap.min.css">
+     <link href="<?php echo base_url('public/styles/bootstrap.min.css')?>" rel="stylesheet">
+    <link href="<?php echo base_url('public/styles/main.min.css')?>" rel="stylesheet">
+	
 	<!-- /build -->
 	<!-- build:css styles/main.min.css -->
-    <link href="<?php echo base_url('public/styles/main.less')?>" rel="stylesheet">
-	<link rel="stylesheet/less" href="public/styles/main.less">	
+
 	<!-- /build -->
 
 
 	 
- 	<!--  <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,300' rel='stylesheet' type='text/css'> --> 
+ 	<link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,300' rel='stylesheet' type='text/css'>
 
 	<!-- Match Media polyfill for IE9 -->
 	<!--[if IE 9]> <script src="scripts/ie/matchMedia.js"></script>  <![endif]--> 
@@ -59,7 +56,6 @@
 			<!-- Search box -->
 			<li>
 				<div class="form-search hidden-xs">
-                
 					<form id="site-search" action="javascript:;">
 						<input type="search" class="form-control" placeholder="Type here for search...">
 						<button type="submit" class="ion ion-ios-search-strong"></button>
@@ -71,7 +67,7 @@
 			<li>
 				<div class="site-logo visible-xs">
 					<a href="javascript:;" class="text-uppercase h3">
-						<span class="text">C.R.M</span>
+						<span class="text">Materia</span>
 					</a>
 				</div>
 			</li> <!-- #end site-logo -->
@@ -135,8 +131,7 @@
 			<!-- profile drop -->
 			<li class="profile-drop hidden-xs dropdown">
 				<a href="javascript:;" data-toggle="dropdown">
-                 
-					<img src="<?php echo base_url('public/images/admin.jpg')?>" alt="admin-pic">
+					<img src="images/admin.jpg" alt="admin-pic">
 				</a>
 				<ul class="dropdown-menu dropdown-menu-right">
 					<li><a href="javascript:;"><span class="ion ion-person">&nbsp;&nbsp;</span>Profile</a></li>
@@ -167,8 +162,7 @@
 							<div class="chat-tab tab clearfix">
 								<h5 class="title mt0 mb20">Online</h5>
 								<div class="user-container mb15">
-                                <img src="<?php echo base_url('public/images/sample/1.jpg')?>" alt="">
-									
+									<img src="images/sample/1.jpg" alt="">
 									<div class="desc">
 										<p class="mb0">John Wick</p>
 										<p class="xsmall"><span class="ion ion-location"></span>&nbsp;San Franciso, USA</p>
@@ -178,8 +172,7 @@
 								</div>
 
 								<div class="user-container mb15">
-                                <img src="<?php echo base_url('public/images/sample/2.jpg')?>" alt="">
-									
+									<img src="images/sample/2.jpg" alt="">
 									<div class="desc">
 										<p class="mb0">George K.</p>
 										<p class="xsmall"><span class="ion ion-location"></span>&nbsp;California, USA</p>
@@ -188,8 +181,7 @@
 								</div>
 
 								<div class="user-container mb15">
-                                 <img src="<?php echo base_url('public/images/sample/3.jpg')?>" alt="">
-									
+									<img src="images/sample/3.jpg" alt="">
 									<div class="desc">
 										<p class="mb0">Shello Dse.</p>
 										<p class="xsmall"><span class="ion ion-location"></span>&nbsp;Berlin, Germany</p>
@@ -198,8 +190,7 @@
 								</div>
 
 								<div class="user-container mb15">
-                                <img src="<?php echo base_url('public/images/sample/4.jpg')?>" alt="">
-									
+									<img src="images/sample/4.jpg" alt="">
 									<div class="desc">
 										<p class="mb0">Lucas Tower</p>
 										<p class="xsmall"><span class="ion ion-location"></span>&nbsp;Paris, France</p>
@@ -208,8 +199,7 @@
 								</div>
 
 								<div class="user-container mb15">
-                                <img src="<?php echo base_url('public/images/sample/5.jpg')?>" alt="">
-									
+									<img src="images/sample/5.jpg" alt="">
 									<div class="desc">
 										<p class="mb0">Hey Win</p>
 										<p class="xsmall"><span class="ion ion-location"></span>&nbsp;Hongkong, China</p>
@@ -218,8 +208,7 @@
 								</div>
 
 								<div class="user-container mb15">
-                                <img src="<?php echo base_url('public/images/sample/6.jpg')?>" alt="">
-									
+									<img src="images/sample/6.jpg" alt="">
 									<div class="desc">
 										<p class="mb0">Kelvin L.</p>
 										<p class="xsmall"><span class="ion ion-location"></span>&nbsp;Moscow, Russia</p>
@@ -230,8 +219,7 @@
 								<h5 class="title mt0 mb20">Offline</h5>
 
 								<div class="user-container mb15">
-                                <img src="<?php echo base_url('public/images/sample/7.jpg')?>" alt="">
-									
+									<img src="images/sample/7.jpg" alt="">
 									<div class="desc">
 										<p class="mb0">Martin Xx.</p>
 										<p class="xsmall"><span class="ion ion-location"></span>&nbsp;xxx, yyy</p>
@@ -240,8 +228,7 @@
 								</div>
 
 								<div class="user-container mb15">
-                                <img src="<?php echo base_url('public/images/sample/2.jpg')?>" alt="">
-									
+									<img src="images/sample/2.jpg" alt="">
 									<div class="desc">
 										<p class="mb0">Lorem Ipsum</p>
 										<p class="xsmall"><span class="ion ion-location"></span>&nbsp;Virginia, USA</p>
@@ -346,7 +333,7 @@
 		<aside class="nav-wrap" id="site-nav" data-perfect-scrollbar>
 			<div class="nav-head">
 				<!-- site logo -->
-				<a href="public/index.html" class="site-logo text-uppercase">
+				<a href="index.html" class="site-logo text-uppercase">
 					<i class="ion ion-disc"></i>
 					<span class="text">Materia</span>
 				</a>
@@ -356,111 +343,90 @@
 
 			<nav class="site-nav clearfix" role="navigation">
 				<div class="profile clearfix mb15">
-                <img src="<?php echo base_url('public/images/admin.jpg')?>" alt="admin">
-					
+					<img src="images/admin.jpg" alt="admin">
 					<div class="group">
-						<h5 class="name">admin</h5>
-						<small class="desig text-uppercase">expert4dev</small>
+						<h5 class="name">Robert Smith</h5>
+						<small class="desig text-uppercase">UX Designer</small>
 					</div>
 				</div>
 
 				<!-- navigation -->
-				<ul class="list-unstyled clearfix nav-list mb15">
+							<ul class="list-unstyled clearfix nav-list mb15">
 					<li class="active">
-						<a href="public/index.html">
+						<a href="index.html">
 							<i class="ion ion-monitor"></i>
-							<span class="text">tableau de bord</span>
+							<span class="text">Dashboard</span>
 						</a>
 					</li>
-					
-
-				
 					
 					<li>
 						<a href="javascript:;">
 							<i class="ion ion-android-options"></i>
 							<span class="text">Services</span>
 							<i class="arrow ion-chevron-left"></i>
-							<span class="badge badge-xs badge-info">4</span>
+
 						</a>
 						<ul class="inner-drop list-unstyled">
-							<li><a href="servicecon\ajoutService">Ajout Service</a></li>
-							<li><a href="servicecon\listedeService">Liste Service</a></li>
-							<li><a href="servicecon\modifierService">Modification de Service</a></li>
-							<li><a href="servicecon\supprimerService">suppression de service</a></li>
+							<li><a href="servicecon\ajoutService">Ajouter un service</a></li>
+							<li><a href="servicecon\modifierService">Modifier un service</a></li>
+							<li><a href="servicecon\listedeService">Liste de sercives</a></li>
+							<li><a href="servicecon\supprimerService">Supprimer un service </a></li>
 							
-							
-						
 							
 						</ul>
 					</li>
-
-					<li>
+<li>
 						<a href="javascript:;">
-							<i class="ion ion-asterisk"></i>
+							<i class="ion ion-android-options"></i>
 							<span class="text">Clients</span>
 							<i class="arrow ion-chevron-left"></i>
-							<span class="badge badge-xs badge-primary">4</span>
+
 						</a>
-						<ul class="inner-drop nested list-unstyled">
-								<li><a href="clientcont/ajoutClient">Ajouter un Client</a></li>
-							<li><a href="clientcont/listedeClient">Liste de Client</a></li>
-							<li><a href="clientcont/modifierClientcon">Modification de Client</a></li>
-							<li><a href="clientcont/supprimerClient">suppression de Client</a></li>
+						<ul class="inner-drop list-unstyled">
+                       
+							<li><a href="clientcont\ajoutClient">Ajouter un Client</a></li>
+							<li><a href="clientcont/modifierClientcon">Modifier un Client</a></li>
+							<li><a href="clientcont/listedeClient">Liste de Clients</a></li>
+							<li><a href="clientcont/supprimerClient">Supprimer un Client </a></li>
+							
+							
 						</ul>
 					</li>
-
-					<li>
+                    <li>
 						<a href="javascript:;">
-							<i class="ion ion-stats-bars"></i>
+							<i class="ion ion-android-options"></i>
 							<span class="text">Devis</span>
 							<i class="arrow ion-chevron-left"></i>
+
 						</a>
 						<ul class="inner-drop list-unstyled">
-								<li><a href="deviscont/ajoutDevis">Ajouter un Devis</a></li>
-							<li><a href="deviscont/listedeDevis">Liste de Devis</a></li>
-							<li><a href="deviscont/modifierDeviscont">Modification de Devis</a></li>
-							<li><a href="deviscont/supprimerDevis">suppression de Devis</a></li>
-                            <li><a href="non">imprimer devis (P.D.F)</a></li>
-						</ul>
-					</li>
-					<li>
-						<a href="javascript:;">
-							<i class="ion ion-document-text"></i>
-							<span class="text">Factures</span>
-							<i class="arrow ion-chevron-left"></i>
-						</a>
-						<ul class="inner-drop list-unstyled">
-							<li><a href="facturecont/ajoutFacture">Ajouter un Facture</a></li>
-							<li><a href="facturecont/listedeFacture">Liste de Facture</a></li>
-							<li><a href="facturecont/modifierFacturecont">Modification de Facture</a></li>
-							<li><a href="facturecont/supprimerFacture">suppression de Facture</a></li>
-                            <li><a href="non">imprimer Facture (P.D.F)</a></li>
-						</ul>
-					</li>
-					<li>
-						<a href="public/gmap.html">
-							<i class="ion ion-map"></i>
-							<span class="text">Depenses</span>
-						</a>
-                        <ul class="inner-drop list-unstyled">
-							<li><a href="non">Gestion de Depense</a></li>
-							<li><a href="non">Rapport Depense/recette</a></li>
+							<li><a href="deviscont/ajoutDevis">Ajouter un Devis</a></li>
+							<li><a href="deviscont/modifierDeviscont">Modifier un Devis</a></li>
+							<li><a href="deviscont/listedeDevis">Liste de devis</a></li>
+							<li><a href="deviscont/supprimerDevis">Supprimer un devis </a></li>
 							
-						
+							
+						</ul>
+					</li>
+                    <li>
+						<a href="javascript:;">
+							<i class="ion ion-android-options"></i>
+							<span class="text">Depense</span>
+							<i class="arrow ion-chevron-left"></i>
+
+						</a>
+						<ul class="inner-drop list-unstyled">
+							<li><a href="ui.buttons.html">Gestion de depense</a></li>
+							<li><a href="ui.typography.html">Rapport depense/recette</a></li>
+							<li><a href="ui.typography.html">Imprimer Facture</a></li>
+							
+							
 						</ul>
 					</li>
 					
-				
+					
+					
 				</ul> <!-- #end navigation -->
-			</nav>
-
-			<!-- nav-foot -->
-			<footer class="nav-foot">
-				<p>2015 &copy; <span>MATERIA</span></p>
-			</footer>
-
-		</aside>
 		<!-- #end main-navigation -->
 
 		<!-- content-here -->
@@ -687,7 +653,7 @@
 											</p>
 										</div>
 										<div class="right-side">
-											<img src="public/images/admin.jpg" alt="user">
+											<img src="images/admin.jpg" alt="user">
 											<div class="rating text-warning">
 												<input type="hidden" class="rating-control" value="4" data-filled="fa fa-star" data-empty="fa fa-star-o" />
 											</div>
@@ -934,52 +900,32 @@
 	</div>
 	<!-- #end theme settings -->
 
-
+<script src="<?php echo base_url('public/scripts/vendors.js')?>"></script>	
+<script src="<?php echo base_url('public/scripts/plugins/d3.min.js')?>"></script>
+<script src="<?php echo base_url('scripts/plugins/c3.min.js')?>"></script>
+<script src="<?php echo base_url('public/scripts/plugins/screenfull.js')?>"></script>
+<script src="<?php echo base_url('public/scripts/plugins/perfect-scrollbar.min.js')?>"></script>
+<script src="<?php echo base_url('public/scripts/plugins/waves.min.js')?>"></script>
+<script src="<?php echo base_url('public/scripts/plugins/jquery.sparkline.min.js')?>"></script> 
+<script src="<?php echo base_url('public/scripts/plugins/jquery.easypiechart.min.js')?>"></script>
+<script src="<?php echo base_url('public/scripts/plugins/bootstrap-rating.min.js')?>"></script>
+<script src="<?php echo base_url('public/scripts/app.js')?>"></script>
+<script src="<?php echo base_url('public/scripts/index.init.js')?>"></script>
 	
 
 	<!-- Dev only -->
 	<!-- build:remove -->
-    <link href="<?php echo base_url('public/scripts/dev/less.min.js')?>" rel="stylesheet">
-	<script src="public/scripts/dev/less.min.js"></script>	
+	<script src="scripts/dev/less.min.js"></script>
+    <script src="<?php echo base_url('public/scripts/dev/less.min.js')?>"></script>	
 	<!-- /build -->
 
 	<!-- Vendors -->
 	<!-- build:js scripts/vendors.js -->
-    <link href="<?php echo base_url('public/scripts/vendors/jquery.min.js')?>" rel="stylesheet">
-    <link href="<?php echo base_url('public/scripts/vendors/bootstrap.min.js')?>" rel="stylesheet">
-	<script src="public/scripts/vendors/jquery.min.js"></script> 
-	<script src="public/scripts/vendors/bootstrap.min.js"></script>
+    <script src="<?php echo base_url('public/scripts/vendors/jquery.min.js')?>"></script>	
+    <script src="<?php echo base_url('public/scripts/vendors/bootstrap.min.js')?>"></script>	
+	
 	<!-- /build -->
-     <link href="<?php echo base_url('public/scripts/plugins/d3.min.js')?>" rel="stylesheet">
-      <link href="<?php echo base_url('public/scripts/plugins/c3.min.js')?>" rel="stylesheet">
-       <link href="<?php echo base_url('public/scripts/plugins/screenfull.js')?>" rel="stylesheet">
-       
-        <link href="<?php echo base_url('public/scripts/plugins/perfect-scrollbar.min.js')?>" rel="stylesheet">
-        
-         <link href="<?php echo base_url('public/scripts/plugins/waves.min.js')?>" rel="stylesheet">
-         
-          <link href="<?php echo base_url('public/scripts/plugins/jquery.sparkline.min.js')?>" rel="stylesheet">
-          
-           <link href="<?php echo base_url('public/scripts/plugins/jquery.easypiechart.min.js')?>" rel="stylesheet">
-            <link href="<?php echo base_url('public/scripts/plugins/bootstrap-rating.min.js')?>" rel="stylesheet">
-             <link href="<?php echo base_url('public/scripts/app.js')?>" rel="stylesheet">
-              <link href="<?php echo base_url('public/scripts/index.init.js')?>" rel="stylesheet">
-    
-	<script src="public/scripts/plugins/d3.min.js"></script>
-	<script src="public/scripts/plugins/c3.min.js"></script>
-	<script src="public/scripts/plugins/screenfull.js"></script>
-	<script src="public/scripts/plugins/perfect-scrollbar.min.js"></script>
-    
-	<script src="public/scripts/plugins/waves.min.js"></script>
-    
-	<script src="public/scripts/plugins/jquery.sparkline.min.js"></script>
-    
-	<script src="public/scripts/plugins/jquery.easypiechart.min.js"></script>
-    
-	<script src="public/scripts/plugins/bootstrap-rating.min.js"></script>
-    
-	<script src="public/scripts/app.js"></script>
-	<script src="public/scripts/index.init.js"></script>
+	
 
 </body>
 </html>

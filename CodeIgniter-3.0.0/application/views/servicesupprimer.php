@@ -9,29 +9,22 @@
 	<meta name="author" content="solutionportal">
 	<!-- <base href="/"> -->
 
-	<title>Ajouter un Service</title>
+	<title>Supprimer un service </title>
 	
 	<!-- Icons -->
-<link rel="stylesheet" href="public/fonts/ionicons/css/ionicons.min.css">
-<link rel="stylesheet" href="public/fonts/font-awesome/css/font-awesome.min.css">
-
+     <link href="<?php echo base_url('public/fonts/ionicons/css/ionicons.min.css')?>" rel="stylesheet">
+     <link href="<?php echo base_url('public/fonts/font-awesome/css/font-awesome.min.css')?>" rel="stylesheet">
 
 	<!-- Plugins -->
-	<link rel="stylesheet" href="public/styles/plugins/waves.css">
-	<link rel="stylesheet" href="public/styles/plugins/perfect-scrollbar.css">
-	<link rel="stylesheet" href="public/styles/plugins/select2.css">
-	<link rel="stylesheet" href="public/styles/plugins/bootstrap-colorpicker.css">
-	<link rel="stylesheet" href="public/styles/plugins/bootstrap-slider.css">
-	<link rel="stylesheet" href="public/styles/plugins/bootstrap-datepicker.css">
-	<link rel="stylesheet" href="public/styles/plugins/summernote.css">
+    <link href="<?php echo base_url('public/styles/plugins/c3.css')?>" rel="stylesheet">
+    <link href="<?php echo base_url('public/styles/plugins/waves.css')?>" rel="stylesheet">
+    <link href="<?php echo base_url('public/styles/plugins/perfect-scrollbar.css')?>" rel="stylesheet">
+
 	
 	<!-- Css/Less Stylesheets -->
-	<!-- build:css styles/bootstrap.min.css -->
-	<link rel="stylesheet" href="styles/vendors/bootstrap.min.css">
-	<!-- /build -->
-	<!-- build:css styles/main.min.css -->
-	<link rel="stylesheet/less" href="styles/main.less">	
-	<!-- /build -->
+    <link href="<?php echo base_url('public/styles/bootstrap.min.css')?>" rel="stylesheet">
+    <link href="<?php echo base_url('public/styles/main.min.css')?>" rel="stylesheet">
+	
 
 
 	 
@@ -44,9 +37,290 @@
 </head>
 <body id="app" class="app off-canvas">
 	
+	<!-- header -->
+	<header class="site-head" id="site-head">
+		<ul class="list-unstyled left-elems">
+			<!-- nav trigger/collapse -->
+			<li>
+				<a href="javascript:;" class="nav-trigger ion ion-drag"></a>
+			</li>
+			<!-- #end nav-trigger -->
 
+			<!-- Search box -->
+			<li>
+				<div class="form-search hidden-xs">
+					<form id="site-search" action="javascript:;">
+						<input type="search" class="form-control" placeholder="Type here for search...">
+						<button type="submit" class="ion ion-ios-search-strong"></button>
+					</form>
+				</div>
+			</li>	<!-- #end search-box -->
 
-			
+			<!-- site-logo for mobile nav -->
+			<li>
+				<div class="site-logo visible-xs">
+					<a href="javascript:;" class="text-uppercase h3">
+						<span class="text">Materia</span>
+					</a>
+				</div>
+			</li> <!-- #end site-logo -->
+
+			<!-- fullscreen -->
+			<li class="fullscreen hidden-xs">
+				<a href="javascript:;"><i class="ion ion-qr-scanner"></i></a>
+
+			</li>	<!-- #end fullscreen -->
+
+			<!-- notification drop -->
+			<li class="notify-drop hidden-xs dropdown">
+				<a href="javascript:;" data-toggle="dropdown">
+					<i class="ion ion-speakerphone"></i>
+					<span class="badge badge-danger badge-xs circle">3</span>
+				</a>
+
+				<div class="panel panel-default dropdown-menu">
+					<div class="panel-heading">
+						You have 3 new notifications 
+						<a href="javascript:;" class="right btn btn-xs btn-pink mt-3">Show All</a>
+					</div>
+					<div class="panel-body">
+						<ul class="list-unstyled">
+							<li class="clearfix">
+								<a href="javascript:;">
+									<span class="ion ion-archive left bg-success"></span>
+									<div class="desc">
+										<strong>App downloaded</strong>
+										<p class="small text-muted">1 min ago</p>
+									</div>
+								</a>
+							</li>
+							<li class="clearfix">
+								<a href="javascript:;">
+									<span class="ion ion-alert-circled left bg-danger"></span>
+									<div class="desc">
+										<strong>Application Error</strong>
+										<p class="small text-muted">4 hours ago</p>
+									</div>
+								</a>
+							</li>
+							<li class="clearfix">
+								<a href="javascript:;">
+									<span class="ion ion-person left bg-info"></span>
+									<div class="desc">
+										<strong>New User Registered</strong>
+										<p class="small text-muted">2 days ago</p>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+			</li>	<!-- #end notification drop -->
+
+		</ul>
+
+		<ul class="list-unstyled right-elems">
+			<!-- profile drop -->
+			<li class="profile-drop hidden-xs dropdown">
+				<a href="javascript:;" data-toggle="dropdown">
+                <img src="<?php echo base_url('public/images/admin.jpg')?>" alt="admin-pic">
+					
+				</a>
+				<ul class="dropdown-menu dropdown-menu-right">
+					<li><a href="javascript:;"><span class="ion ion-person">&nbsp;&nbsp;</span>Profile</a></li>
+					<li><a href="javascript:;"><span class="ion ion-settings">&nbsp;&nbsp;</span>Settings</a></li>
+					<li class="divider"></li>
+					<li><a href="javascript:;"><span class="ion ion-lock-combination">&nbsp;&nbsp;</span>Lock Screen</a></li>
+					<li><a href="javascript:;"><span class="ion ion-power">&nbsp;&nbsp;</span>Logout</a></li>
+				</ul>
+			</li>
+			<!-- #end profile-drop -->
+
+			<!-- sidebar contact -->
+			<li class="floating-sidebar">
+				<a href="javascript:;">
+					<i class="ion ion-grid"></i>
+				</a>
+				<div class="sidebar-wrap" data-perfect-scrollbar>
+					<ul class="nav nav-tabs nav-justified">
+						<li class="active">
+							<a href="#sidebar-chat-tab" data-toggle="tab">Chat</a>
+						</li>
+						<li>
+							<a href="#sidebar-info-tab" data-toggle="tab">Info</a>
+						</li>
+					</ul> <!-- #end nav-tabs -->
+					<div class="tab-content">
+						<div class="tab-pane active" id="sidebar-chat-tab">
+							<div class="chat-tab tab clearfix">
+								<h5 class="title mt0 mb20">Online</h5>
+								<div class="user-container mb15">
+                                
+                                <img src="<?php echo base_url('public/images/sample/1.jpg')?>" alt="">
+									
+									<div class="desc">
+										<p class="mb0">John Wick</p>
+										<p class="xsmall"><span class="ion ion-location"></span>&nbsp;San Franciso, USA</p>
+
+									</div>
+									<span class="ion ion-record avail right on"></span>
+								</div>
+
+								<div class="user-container mb15">
+                                <img src="<?php echo base_url('public/images/sample/2.jpg')?>" alt="">
+									
+									<div class="desc">
+										<p class="mb0">George K.</p>
+										<p class="xsmall"><span class="ion ion-location"></span>&nbsp;California, USA</p>
+									</div>
+									<span class="ion ion-record avail right on"></span>
+								</div>
+
+								<div class="user-container mb15">
+                                <img src="<?php echo base_url('public/images/sample/3.jpg')?>" alt="">
+									
+									<div class="desc">
+										<p class="mb0">Shello Dse.</p>
+										<p class="xsmall"><span class="ion ion-location"></span>&nbsp;Berlin, Germany</p>
+									</div>
+									<span class="ion ion-record avail right away"></span>
+								</div>
+
+								<div class="user-container mb15">
+                                <img src="<?php echo base_url('public/images/sample/4.jpg')?>" alt="">
+									
+									<div class="desc">
+										<p class="mb0">Lucas Tower</p>
+										<p class="xsmall"><span class="ion ion-location"></span>&nbsp;Paris, France</p>
+									</div>
+									<span class="ion ion-record avail right away"></span>
+								</div>
+
+								<div class="user-container mb15">
+                                <img src="<?php echo base_url('public/images/sample/5.jpg')?>" alt="">
+									
+									<div class="desc">
+										<p class="mb0">Hey Win</p>
+										<p class="xsmall"><span class="ion ion-location"></span>&nbsp;Hongkong, China</p>
+									</div>
+									<span class="ion ion-record avail right on"></span>
+								</div>
+
+								<div class="user-container mb15">
+                                <img src="<?php echo base_url('public/images/sample/6.jpg')?>" alt="">
+									
+									<div class="desc">
+										<p class="mb0">Kelvin L.</p>
+										<p class="xsmall"><span class="ion ion-location"></span>&nbsp;Moscow, Russia</p>
+									</div>
+									<span class="ion ion-record avail right on"></span>
+								</div>
+
+								<h5 class="title mt0 mb20">Offline</h5>
+
+								<div class="user-container mb15">
+                                <img src="<?php echo base_url('public/images/sample/7.jpg')?>" alt="">
+									
+									<div class="desc">
+										<p class="mb0">Martin Xx.</p>
+										<p class="xsmall"><span class="ion ion-location"></span>&nbsp;xxx, yyy</p>
+									</div>
+									<span class="ion ion-record avail right off"></span>
+								</div>
+
+								<div class="user-container mb15">
+                                <img src="<?php echo base_url('public/images/sample/2.jpg')?>" alt="">
+									
+									<div class="desc">
+										<p class="mb0">Lorem Ipsum</p>
+										<p class="xsmall"><span class="ion ion-location"></span>&nbsp;Virginia, USA</p>
+									</div>
+									<span class="ion ion-record avail right off"></span>
+								</div>
+							</div>
+						</div>
+
+						<div class="tab-pane" id="sidebar-info-tab">
+							<div class="info-tab tab clearfix">
+								<h5 class="title mt0 mb20">Work in Progress</h5>
+								<ul class="list-unstyled mb15 clearfix">
+									<li>
+										<div class="clearfix mb10">
+											<small class="left">App Upload</small>
+											<small class="right">80%</small>
+										</div>
+										<div class="progress-xs progress">
+											<div class="progress-bar progress-bar-primary" style="width: 80%;"></div>
+										</div>
+									</li>
+									<li>
+										<div class="clearfix mb10">
+											<small class="left">Creating Assets</small>
+											<small class="right">50%</small>
+										</div>
+										<div class="progress-xs progress">
+											<div class="progress-bar progress-bar-danger" style="width: 50%;"></div>
+										</div>
+									</li>
+									<li>
+										<div class="clearfix mb10">
+											<small class="left">New UI 2.0</small>
+											<small class="right">90%</small>
+										</div>
+										<div class="progress-xs progress">
+											<div class="progress-bar progress-bar-success" style="width: 90%;"></div>
+										</div>
+									</li>
+								</ul>
+
+								<h5 class="title mt0 mb20">Settings</h5>
+								<div class="clearfix mb15">
+									<div class="left">
+										<p>Show me online</p>
+									</div>
+
+									<div class="right">
+										<div class="ui-toggle ui-toggle-success ui-toggle-xs">
+											<label>
+												<input type="checkbox" checked> 
+												<span></span>
+											</label>
+										</div>
+									</div>
+								</div>
+
+								<div class="clearfix mb15">
+									<div class="left">
+										<p>Notifications</p>
+									</div>
+
+									<div class="right">
+										<div class="ui-toggle ui-toggle-success ui-toggle-xs">
+											<label>
+												<input type="checkbox"> 
+												<span></span>
+											</label>
+										</div>
+									</div>
+								</div>
+
+								<div class="clearfix mb15">
+									<div class="left">
+										<p>Enable History</p>
+									</div>
+
+									<div class="right">
+										<div class="ui-toggle ui-toggle-success ui-toggle-xs">
+											<label>
+												<input type="checkbox" checked> 
+												<span></span>
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div> <!-- #end tab content -->
 				</div> <!-- #end sidebar-wrap -->
 			</li>
@@ -56,7 +330,6 @@
 	</header>
 	<!-- #end header -->
 
-
 	<!-- main-container -->
 	<div class="main-container clearfix">
 		<!-- main-navigation -->
@@ -65,7 +338,7 @@
 				<!-- site logo -->
 				<a href="index.html" class="site-logo text-uppercase">
 					<i class="ion ion-disc"></i>
-					<span class="text">C.M.P</span>
+					<span class="text">C.R.M</span>
 				</a>
 			</div>
 
@@ -73,58 +346,95 @@
 
 			<nav class="site-nav clearfix" role="navigation">
 				<div class="profile clearfix mb15">
-					<img src="images/admin.jpg" alt="admin">
-					<div class="group">
-						<h5 class="name">Expert4dev</h5>
-						<small class="desig text-uppercase">C.R.M</small>
+      <img src="<?php echo base_url('public/images/admin.jpg')?>" alt="admin">
+				
+				  <div class="group">
+						<h5 class="name">C.R.M</h5>
 					</div>
 				</div>
 
 				<!-- navigation -->
 				<ul class="list-unstyled clearfix nav-list mb15">
-					<li>
+					<li class="active">
 						<a href="index.html">
 							<i class="ion ion-monitor"></i>
-							<span class="text">tableau de bord </span>
-						</a>
-					</li>
-					<li>
-						<a href="email.inbox.html">
-							<i class="ion ion-email"></i>
-							<span class="text">Service</span>
-						</a>
-					</li>
-
-					<li>
-						<a href="calendar.html">
-							<i class="ion ion-calendar"></i>
-							<span class="text">Client</span>
-							<span class="badge badge-xs badge-danger">hot</span>
-						</a>
-					</li>
-					<li>
-						<a href="material.html">
-							<i class="ion ion-icecream"></i>
-							<span class="text">Facture</span>
-							<span class="badge badge-xs badge-success">new</span>
+							<span class="text">Dashboard</span>
 						</a>
 					</li>
 					
 					<li>
 						<a href="javascript:;">
 							<i class="ion ion-android-options"></i>
+							<span class="text">Services</span>
+							<i class="arrow ion-chevron-left"></i>
+
+						</a>
+						<ul class="inner-drop list-unstyled">
+							<li><a href="ui.buttons.html">Ajouter un service</a></li>
+							<li><a href="ui.typography.html">Modifier un service</a></li>
+							<li><a href="ui.grids.html">Liste de sercives</a></li>
+							<li><a href="ui.panels.html">Supprimer un service </a></li>
+							
+							
+						</ul>
+					</li>
+<li>
+						<a href="javascript:;">
+							<i class="ion ion-android-options"></i>
+							<span class="text">Clients</span>
+							<i class="arrow ion-chevron-left"></i>
+
+						</a>
+						<ul class="inner-drop list-unstyled">
+                       
+							<li><a href="ui.buttons.html">Ajouter un Client</a></li>
+							<li><a href="ui.typography.html">Modifier un Client</a></li>
+							<li><a href="ui.grids.html">Liste de Clients</a></li>
+							<li><a href="ui.panels.html">Supprimer un Client </a></li>
+							
+							
+						</ul>
+					</li>
+                    <li>
+						<a href="javascript:;">
+							<i class="ion ion-android-options"></i>
+							<span class="text">Devis</span>
+							<i class="arrow ion-chevron-left"></i>
+
+						</a>
+						<ul class="inner-drop list-unstyled">
+							<li><a href="ui.buttons.html">Ajouter un Devis</a></li>
+							<li><a href="ui.typography.html">Modifier un Devis</a></li>
+							<li><a href="ui.grids.html">Liste de devis</a></li>
+							<li><a href="ui.panels.html">Supprimer un devis </a></li>
+							
+							
+						</ul>
+					</li>
+                    <li>
+						<a href="javascript:;">
+							<i class="ion ion-android-options"></i>
 							<span class="text">Depense</span>
 							<i class="arrow ion-chevron-left"></i>
-							<span class="badge badge-xs badge-info">10</span>
+
 						</a>
-						</li>
-                        </ul>
-                        </nav>
-			
+						<ul class="inner-drop list-unstyled">
+							<li><a href="ui.buttons.html">Ajouter un service</a></li>
+							<li><a href="ui.typography.html">Modifier un service</a></li>
+							
+							
+							
+						</ul>
+					</li>
+					
+					
+					
+				</ul> <!-- #end navigation -->
+			</nav>
 
 			<!-- nav-foot -->
 			<footer class="nav-foot">
-				<p>2015 &copy; <span>C.M.P</span></p>
+				<p>2015 &copy; C.R.M</p>
 			</footer>
 
 		</aside>
@@ -132,64 +442,182 @@
 
 		<!-- content-here -->
 		<div class="content-container" id="content">
-			<div class="page page-forms-elements">
+			<!-- dashboard page -->
+			<div class="page page-dashboard">
 
-				<ol class="breadcrumb breadcrumb-small">
-					<li>Ajout</li>
-					<li class="active"><a href="forms.elements.html">Service</a></li>
-				</ol>
+			  <div class="page-wrap">
 
-				<div class="page-wrap">
-					<!-- row -->
-					<div class="row">
-				
-						<!-- col-left -->
-						<div class="col-sm-12 col-md-6">
-							<div class="panel panel-default panel-hovered panel-stacked mb30">
-								<div class="panel-heading"></div>
+			    <div class="row">
+						<!-- dashboard header -->
+						<div class="col-md-6">
+						  <div class="panel panel-default panel-hovered panel-stacked mb30">
+								<div class="panel-heading">Supprimer un service</div>
 								<div class="panel-body">
 									<form role="form" class="form-horizontal" action="javascript:;"> <!-- form horizontal acts as a row -->
 										<!-- normal control -->
-										<div class="form-group">
-											<label class="col-md-3 control-label">id Service</label>
+									  <div class="form-group">
+											<label class="col-md-3 control-label">ID_service :</label>
 											<div class="col-md-9">
-												<input type="text" class="form-control" name="nom_service">
+												<input type="text" class="form-control" name="id_service" id="id_service">
 											</div>
 										</div>
+
+									  <!-- textarea control -->
+										<div class="form-group">
+											<label class="col-md-3 control-label">Textarea</label>
+											<div class="col-md-9">
+												<textarea rows="5" class="form-control resize-v" placeholder="Message ici"></textarea>
+											</div>
+									  </div>
 										
-  
+										
+									
+										
+									
+									
+
+
+		
+
+										<!-- button addon -->
+										<div class="form-group">
+	
+											<div class="col-md-9">
+											  <div class="input-group">
+												<div class="input-group-btn">
+														
+											    </div>
+											  </div>
+											</div>	
+										</div>
+										
 										<div class="clearfix right">
-											<input class="btn btn-primary mr5" type="submit" value="supprimer" name="submit" ></input>
-											<button class="btn btn-default">Annuler</button>
+											<button class="btn btn-primary mr5 waves-effect" type="submit" id="submitForm">Supprimer</button>
+											<button class="btn btn-default waves-effect">Cancel</button>
 										</div>
 									</form>
 								</div>
 							</div>
-						</div> 
+						</div>
+                        <div class="col-md-6">
+                        <div class="alert alert-success" id="alert_msg" style="display:none;">
+										<button type="button" class="close" data-dismiss="alert">
+											<span aria-hidden="true">×</span>
+										</button>
+										<div>ajout client avec succées </div>
+									</div>
+                        </div>
+				  </div> <!-- #end row -->
 
+					
 
+					
+
+							
+
+				 
+				</div> 
+				<!-- #end page-wrap -->
+			</div>
+			<!-- #end dashboard page -->
+		</div>
+
+	</div> <!-- #end main-container -->
+
+	<!-- theme settings -->
+	<div class="site-settings clearfix hidden-xs">
+		<div class="settings clearfix">
+			<div class="trigger ion ion-settings left"></div>
+			<div class="wrapper left">
+				<ul class="list-unstyled other-settings">
+					<li class="clearfix mb10">
+						<div class="left small">Nav Horizontal</div>
+						<div class="md-switch right">
+							<label>
+								<input type="checkbox" id="navHorizontal"> 
+								<span>&nbsp;</span> 
+							</label>
+						</div>
 						
+						
+					</li>
+					<li class="clearfix mb10">
+						<div class="left small">Fixed Header</div>
+						<div class="md-switch right">
+							<label>
+								<input type="checkbox"  id="fixedHeader"> 
+								<span>&nbsp;</span> 
+							</label>
+						</div>
+					</li>
+					<li class="clearfix mb10">
+						<div class="left small">Nav Full</div>
+						<div class="md-switch right">
+							<label>
+								<input type="checkbox"  id="navFull"> 
+								<span>&nbsp;</span> 
+							</label>
+						</div>
+					</li>
+				</ul>
+				<hr/>
+				<ul class="themes list-unstyled" id="themeColor">
+					<li data-theme="theme-zero" class="active"></li>
+					<li data-theme="theme-one"></li>
+					<li data-theme="theme-two"></li>
+					<li data-theme="theme-three"></li>
+					<li data-theme="theme-four"></li>
+					<li data-theme="theme-five"></li>
+					<li data-theme="theme-six"></li>
+					<li data-theme="theme-seven"></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- #end theme settings -->
 
 
 	
-	<!-- build:remove -->
-	<script src="scripts/dev/less.min.js"></script>	
-	<!-- /build -->
 
+	<!-- Dev only -->
 	<!-- Vendors -->
-	<!-- build:js scripts/vendors.js -->
-	<script src="public/scripts/vendors/jquery.min.js"></script> 
-	<script src="public/scripts/vendors/bootstrap.min.js"></script>
-	<!-- /build -->
-	<script src="public/scripts/plugins/screenfull.js"></script>
-	<script src="public/scripts/plugins/perfect-scrollbar.min.js"></script>
-	<script src="public/scripts/plugins/waves.min.js"></script>
-	<script src="public/scripts/plugins/select2.min.js"></script>
-	<script src="public/scripts/plugins/bootstrap-colorpicker.min.js"></script>
-	<script src="public/scripts/plugins/bootstrap-slider.min.js"></script>
-	<script src="public/scripts/plugins/summernote.min.js"></script>
-	<script src="public/scripts/plugins/bootstrap-datepicker.min.js"></script>
-	<script src="public/scripts/app.js"></script>
-	<script src="public/scripts/form-elements.init.js"></script>
+
+	
+	
+<script src="<?php echo base_url('public/scripts/vendors.js')?>"></script>	
+<script src="<?php echo base_url('public/scripts/plugins/d3.min.js')?>"></script>
+<script src="<?php echo base_url('scripts/plugins/c3.min.js')?>"></script>
+<script src="<?php echo base_url('public/scripts/plugins/screenfull.js')?>"></script>
+<script src="<?php echo base_url('public/scripts/plugins/perfect-scrollbar.min.js')?>"></script>
+<script src="<?php echo base_url('public/scripts/plugins/waves.min.js')?>"></script>
+<script src="<?php echo base_url('public/scripts/plugins/jquery.sparkline.min.js')?>"></script> 
+<script src="<?php echo base_url('public/scripts/plugins/jquery.easypiechart.min.js')?>"></script>
+<script src="<?php echo base_url('public/scripts/plugins/bootstrap-rating.min.js')?>"></script>
+<script src="<?php echo base_url('public/scripts/app.js')?>"></script>
+<script src="<?php echo base_url('public/scripts/index.init.js')?>"></script>
+<script>
+$("#submitForm").click(function(){
+	
+	
+	var nomc= $("#id_service").val();
+	
+	//var urlStr = "ajouter1.php?id="+id+"&nom="+nom+"&prenom="+prenom+"&adresse="+adresse+"&numero="+numero;
+	$.ajax({
+		type: "POST",
+		url: "ajoutClient",
+		data: {id_service:id_service},
+		success: function(resp)
+		{
+			if(resp=="sup.success"){
+			   $("#alert_msg").show();
+			}
+		},
+		error: function(x)
+		{
+			alert( "Erreur: " + x);
+		}
+	});
+});
+</script>
 </body>
 </html>

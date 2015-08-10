@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,22 +9,27 @@
 	<meta name="author" content="solutionportal">
 	<!-- <base href="/"> -->
 
-	<title>Page connexion</title>
+	<title>Materia - Admin Template</title>
 	
 	<!-- Icons -->
-	<link rel="stylesheet" href="public/fonts/ionicons/css/ionicons.min.css">
-	<link rel="stylesheet" href="public/fonts/font-awesome/css/font-awesome.min.css">
+      <link href="<?php echo base_url('public2/fonts/ionicons/css/ionicons.min.css')?>" rel="stylesheet">
+     <link href="<?php echo base_url('public2/fonts/font-awesome/css/font-awesome.min.css')?>" rel="stylesheet">
+	
 
 	<!-- Plugins -->
-	<link rel="stylesheet" href="public/styles/plugins/waves.css">
-	<link rel="stylesheet" href="public/styles/plugins/perfect-scrollbar.css">
+    <link href="<?php echo base_url('public2/styles/plugins/waves.css')?>" rel="stylesheet">
+     <link href="<?php echo base_url('public2/styles/plugins/perfect-scrollbar.css')?>" rel="stylesheet">
+
 	
 	<!-- Css/Less Stylesheets -->
 	<!-- build:css styles/bootstrap.min.css -->
-	<link rel="stylesheet" href="public/styles/vendors/bootstrap.min.css">
+       <link href="<?php echo base_url('public2/styles/vendors/bootstrap.min.css')?>" rel="stylesheet">
 	<!-- /build -->
+    
 	<!-- build:css styles/main.min.css -->
-	<link rel="stylesheet/less" href="public/styles/main.less">	
+        <link href="<?php echo base_url('public2/styles/main.less')?>" rel="stylesheet">
+
+	
 	<!-- /build -->
 
 
@@ -44,7 +48,7 @@
 	<!-- main-container -->
 	<div class="main-container clearfix">
 		
-		<!-- content-here -->
+	<!-- content-here -->
 		<div class="content-container" id="content">
 			<div class="page page-auth">
 				<div class="auth-container">
@@ -104,18 +108,20 @@
 
 
 	
-
 	<!-- Dev only -->
 	<!-- build:remove -->
-	<script src="public/scripts/dev/less.min.js"></script>	
+        <script src="<?php echo base_url('public2/scripts/dev/less.min.js')?>"></script>	
+
 	<!-- /build -->
 
 	<!-- Vendors -->
 	<!-- build:js scripts/vendors.js -->
-	<script src="public/scripts/vendors/jquery.min.js"></script> 
-	<script src="../public/scripts/vendors/bootstrap.min.js"></script>
+            <script src="<?php echo base_url('public2/scripts/vendors/jquery.min.js')?>"></script>	
+        <script src="<?php echo base_url('public2/scripts/vendors/bootstrap.min.js')?>"></script>	
+
 	<!-- /build -->
 
 
 </body>
 </html>
+      

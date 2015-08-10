@@ -41,12 +41,13 @@ if ($ligne=$query->num_rows() > 0)
 		
 		
          $this->db->insert('service',$data); 
+		 echo"add.success";
 
  
 	}
 	public function modifierService($id_service,$nom_service,$type_service)
 	{
-          //$this->load->database();
+          $this->load->database();
 		
 		$data = array(
                'nom_service' => $nom_service,
@@ -56,8 +57,7 @@ if ($ligne=$query->num_rows() > 0)
 
 $this->db->where('id_service', $id_service);
 $this->db->update('service', $data);
-		
-		
+		echo"modify.success";
 
  
 	}

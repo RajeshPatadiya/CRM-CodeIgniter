@@ -54,8 +54,8 @@ if ($ligne=$query->num_rows() > 0)
 }
 	public function ajouterClient($nom,$prenom,$adresse,$numero,$code_tva,$matricule_fiscale)
 	{
-		$this->load->database();
-		
+		 
+          $this->load->database();
 		   $data["nom"]=$nom;
 		   $data["prenom"]=$prenom;
 		   $data["adresse"]=$adresse;
@@ -64,9 +64,8 @@ if ($ligne=$query->num_rows() > 0)
 		   $data["matricule_fiscale"]=$matricule_fiscale;
 		
 		
-         $this->db->insert('client',$data); 
-		 
-
+         $this->db->insert('client',$data);
+         echo"add.success";
  
 	}
 	
@@ -105,7 +104,7 @@ echo json_encode($data);
 $this->db->where('id_client', $id_client);
 $this->db->update('client', $data);
 		
-		
+		echo"modify.success";
 
  
 	}

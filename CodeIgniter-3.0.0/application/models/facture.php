@@ -36,10 +36,11 @@ if ($ligne=$query->num_rows() > 0)
 }
 	
 	
-	public function ajouterFacture($nom_facture,$date_facture,$remise,$prix_tva)
+	public function ajouterFacture($id_client,$nom_facture,$date_facture,$remise,$prix_tva)
 	{
 		$this->load->database();
 		
+		   $data["id_client"]=$id_client;
 		   $data["nom_facture"]=$nom_facture;
 		   $data["date_facture"]=$date_facture;
 		   $data["remise"]=$remise;

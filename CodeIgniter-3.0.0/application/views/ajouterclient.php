@@ -7,7 +7,6 @@
 
 <body>
 <form name="form1" method="POST" >
-id: <input name="id" type="text"  /> <br />
 Nom : <input name="nom" type="text"  /> <br />
 Prenom : <input name="prenom" type="text"  /> <br />
 Adresse : <input name="adresse" type="text"  /> <br />
