@@ -111,31 +111,18 @@ $this->db->update('client', $data);
 	
 	public function supprimerClient($id_client)
 	{
-		$data["id_client"]=$id_client;
+		     $this->load->database();
+
+		    $data["id_client"]=$id_client;
 		
-$this->db->where('id_client', $id_client);
-$this->db->delete('client');
- 
+            $this->db->where('id_client', $id_client);
+            $this->db->delete('client');
+            echo"sup.success";
+			
+			
+			
+		
 	}
-	
-
-
-	
-		/*$this->load->database();
-		
-		$data["id_client"]=$id_client;
-		$data["nom"]=$nom;
-		$data["prenom"]=$prenom;
-		$data["adresse"]=$adresse;
-		$data["numero"]=$numero;
-		$data["code_tva"]=$code_tva;
-		$data["matricule_fiscale"]=$matricule_fiscale;
-		
-$this->db->insert('client',$data); 
-//$res=$this->db->simple_query("insert into client values ($this->id_client ,'$this->nom' , '$this->prenom' , '$this->adresse' , $this->tel )"); 
-//if ( $res== TRUE ) echo "client ajouté"; 
-//else echo "client non ajouté"; */
-
 
 
 }

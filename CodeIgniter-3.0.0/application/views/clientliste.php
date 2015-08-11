@@ -9,29 +9,22 @@
 	<meta name="author" content="solutionportal">
 	<!-- <base href="/"> -->
 
-	<title>Liste de client</title>
+	<title>Ajouter un client</title>
 	
 	<!-- Icons -->
      <link href="<?php echo base_url('public/fonts/ionicons/css/ionicons.min.css')?>" rel="stylesheet">
      <link href="<?php echo base_url('public/fonts/font-awesome/css/font-awesome.min.css')?>" rel="stylesheet">
 
-	
 	<!-- Plugins -->
+    <link href="<?php echo base_url('public/styles/plugins/c3.css')?>" rel="stylesheet">
     <link href="<?php echo base_url('public/styles/plugins/waves.css')?>" rel="stylesheet">
-     <link href="<?php echo base_url('public/styles/plugins/perfect-scrollbar.css')?>" rel="stylesheet">
-	
+    <link href="<?php echo base_url('public/styles/plugins/perfect-scrollbar.css')?>" rel="stylesheet">
+
 	
 	<!-- Css/Less Stylesheets -->
-	<!-- build:css styles/bootstrap.min.css -->
-    <link href="<?php echo base_url('public/styles/vendors/bootstrap.min.css')?>" rel="stylesheet">
-
+    <link href="<?php echo base_url('public/styles/bootstrap.min.css')?>" rel="stylesheet">
+    <link href="<?php echo base_url('public/styles/main.min.css')?>" rel="stylesheet">
 	
-	<!-- /build -->
-	<!-- build:css styles/main.min.css -->
-        <link href="<?php echo base_url('public/styles/main.less')?>" rel="stylesheet/less">
-
-	
-	<!-- /build -->
 
 
 	 
@@ -131,7 +124,8 @@
 			<!-- profile drop -->
 			<li class="profile-drop hidden-xs dropdown">
 				<a href="javascript:;" data-toggle="dropdown">
-					<img src="images/admin.jpg" alt="admin-pic">
+                <img src="<?php echo base_url('public/images/admin.jpg')?>" alt="admin-pic">
+					
 				</a>
 				<ul class="dropdown-menu dropdown-menu-right">
 					<li><a href="javascript:;"><span class="ion ion-person">&nbsp;&nbsp;</span>Profile</a></li>
@@ -162,7 +156,9 @@
 							<div class="chat-tab tab clearfix">
 								<h5 class="title mt0 mb20">Online</h5>
 								<div class="user-container mb15">
-									<img src="images/sample/1.jpg" alt="">
+                                
+                                <img src="<?php echo base_url('public/images/sample/1.jpg')?>" alt="">
+									
 									<div class="desc">
 										<p class="mb0">John Wick</p>
 										<p class="xsmall"><span class="ion ion-location"></span>&nbsp;San Franciso, USA</p>
@@ -172,7 +168,8 @@
 								</div>
 
 								<div class="user-container mb15">
-									<img src="images/sample/2.jpg" alt="">
+                                <img src="<?php echo base_url('public/images/sample/2.jpg')?>" alt="">
+									
 									<div class="desc">
 										<p class="mb0">George K.</p>
 										<p class="xsmall"><span class="ion ion-location"></span>&nbsp;California, USA</p>
@@ -181,7 +178,8 @@
 								</div>
 
 								<div class="user-container mb15">
-									<img src="images/sample/3.jpg" alt="">
+                                <img src="<?php echo base_url('public/images/sample/3.jpg')?>" alt="">
+									
 									<div class="desc">
 										<p class="mb0">Shello Dse.</p>
 										<p class="xsmall"><span class="ion ion-location"></span>&nbsp;Berlin, Germany</p>
@@ -190,7 +188,8 @@
 								</div>
 
 								<div class="user-container mb15">
-									<img src="images/sample/4.jpg" alt="">
+                                <img src="<?php echo base_url('public/images/sample/4.jpg')?>" alt="">
+									
 									<div class="desc">
 										<p class="mb0">Lucas Tower</p>
 										<p class="xsmall"><span class="ion ion-location"></span>&nbsp;Paris, France</p>
@@ -199,7 +198,8 @@
 								</div>
 
 								<div class="user-container mb15">
-									<img src="images/sample/5.jpg" alt="">
+                                <img src="<?php echo base_url('public/images/sample/5.jpg')?>" alt="">
+									
 									<div class="desc">
 										<p class="mb0">Hey Win</p>
 										<p class="xsmall"><span class="ion ion-location"></span>&nbsp;Hongkong, China</p>
@@ -208,7 +208,8 @@
 								</div>
 
 								<div class="user-container mb15">
-									<img src="images/sample/6.jpg" alt="">
+                                <img src="<?php echo base_url('public/images/sample/6.jpg')?>" alt="">
+									
 									<div class="desc">
 										<p class="mb0">Kelvin L.</p>
 										<p class="xsmall"><span class="ion ion-location"></span>&nbsp;Moscow, Russia</p>
@@ -219,7 +220,8 @@
 								<h5 class="title mt0 mb20">Offline</h5>
 
 								<div class="user-container mb15">
-									<img src="images/sample/7.jpg" alt="">
+                                <img src="<?php echo base_url('public/images/sample/7.jpg')?>" alt="">
+									
 									<div class="desc">
 										<p class="mb0">Martin Xx.</p>
 										<p class="xsmall"><span class="ion ion-location"></span>&nbsp;xxx, yyy</p>
@@ -228,7 +230,8 @@
 								</div>
 
 								<div class="user-container mb15">
-									<img src="images/sample/2.jpg" alt="">
+                                <img src="<?php echo base_url('public/images/sample/2.jpg')?>" alt="">
+									
 									<div class="desc">
 										<p class="mb0">Lorem Ipsum</p>
 										<p class="xsmall"><span class="ion ion-location"></span>&nbsp;Virginia, USA</p>
@@ -327,7 +330,6 @@
 	</header>
 	<!-- #end header -->
 
-
 	<!-- main-container -->
 	<div class="main-container clearfix">
 		<!-- main-navigation -->
@@ -336,7 +338,7 @@
 				<!-- site logo -->
 				<a href="index.html" class="site-logo text-uppercase">
 					<i class="ion ion-disc"></i>
-					<span class="text">Materia</span>
+					<span class="text">C.R.M</span>
 				</a>
 			</div>
 
@@ -344,130 +346,94 @@
 
 			<nav class="site-nav clearfix" role="navigation">
 				<div class="profile clearfix mb15">
-					<img src="images/admin.jpg" alt="admin">
-					<div class="group">
-						<h5 class="name">Robert Smith</h5>
-						<small class="desig text-uppercase">UX Designer</small>
+      <img src="<?php echo base_url('public/images/admin.jpg')?>" alt="admin">
+				
+				  <div class="group">
+						<h5 class="name">C.R.M</h5>
 					</div>
 				</div>
-
-				<!-- navigation -->
-				<ul class="list-unstyled clearfix nav-list mb15">
-					<li>
+<!-- navigation -->
+							<ul class="list-unstyled clearfix nav-list mb15">
+					<li class="active">
 						<a href="index.html">
 							<i class="ion ion-monitor"></i>
 							<span class="text">Dashboard</span>
-						</a>
-					</li>
-					<li>
-						<a href="email.inbox.html">
-							<i class="ion ion-email"></i>
-							<span class="text">Email</span>
-						</a>
-					</li>
-
-					<li>
-						<a href="calendar.html">
-							<i class="ion ion-calendar"></i>
-							<span class="text">Calendar</span>
-							<span class="badge badge-xs badge-danger">hot</span>
-						</a>
-					</li>
-					<li>
-						<a href="material.html">
-							<i class="ion ion-icecream"></i>
-							<span class="text">Material</span>
-							<span class="badge badge-xs badge-success">new</span>
 						</a>
 					</li>
 					
 					<li>
 						<a href="javascript:;">
 							<i class="ion ion-android-options"></i>
-							<span class="text">UI Kit</span>
+							<span class="text">Services</span>
 							<i class="arrow ion-chevron-left"></i>
-							<span class="badge badge-xs badge-info">10</span>
-						</a>
-						<ul class="inner-drop list-unstyled">
-							<li><a href="ui.buttons.html">Buttons</a></li>
-							<li><a href="ui.typography.html">Typography</a></li>
-							<li><a href="ui.grids.html">Grids</a></li>
-							<li><a href="ui.panels.html">Panels</a></li>
-							<li><a href="ui.notifications.html">Notifications</a></li>
-							<li><a href="ui.tabs.html">Tabs &amp; Accordion</a></li>
-							<li><a href="ui.progress-bars.html">Progress Bars</a></li>
-							<li><a href="ui.extras.html">Extras</a></li>
-						</ul>
-					</li>
 
-					<li>
-						<a href="javascript:;">
-							<i class="ion ion-asterisk"></i>
-							<span class="text">Icons</span>
-							<i class="arrow ion-chevron-left"></i>
-							<span class="badge badge-xs badge-primary">2</span>
 						</a>
-						<ul class="inner-drop nested list-unstyled">
-							<li><a href="icons.html">Font Awesome</a></li>
+						<ul class="inner-drop list-unstyled">
+							<li><a href="servicecon\ajoutService">Ajouter un service</a></li>
+							<li><a href="servicecon\modifierService">Modifier un service</a></li>
+							<li><a href="servicecon\listedeService">Liste de sercives</a></li>
+							<li><a href="servicecon\supprimerService">Supprimer un service </a></li>
+							
+							
 						</ul>
 					</li>
+<li>
+						<a href="javascript:;">
+							<i class="ion ion-android-options"></i>
+							<span class="text">Clients</span>
+							<i class="arrow ion-chevron-left"></i>
 
-					<li>
-						<a href="javascript:;">
-							<i class="ion ion-stats-bars"></i>
-							<span class="text">Charts</span>
-							<i class="arrow ion-chevron-left"></i>
 						</a>
 						<ul class="inner-drop list-unstyled">
-							<li><a href="charts.c3.html">C3</a></li>
-							<li><a href="charts.sparklines.html">Sparklines</a></li>
+                       
+							<li><a href="clientcont\ajoutClient">Ajouter un Client</a></li>
+							<li><a href="clientcont/modifierClientcon">Modifier un Client</a></li>
+							<li><a href="clientcont/listedeClient">Liste de Clients</a></li>
+							<li><a href="clientcont/supprimerClient">Supprimer un Client </a></li>
+							
+							
 						</ul>
 					</li>
-					<li>
+                    <li>
 						<a href="javascript:;">
-							<i class="ion ion-document-text"></i>
-							<span class="text">Forms</span>
+							<i class="ion ion-android-options"></i>
+							<span class="text">Devis</span>
 							<i class="arrow ion-chevron-left"></i>
+
 						</a>
 						<ul class="inner-drop list-unstyled">
-							<li><a href="forms.elements.html">Elements</a></li>
+							<li><a href="deviscont/ajoutDevis">Ajouter un Devis</a></li>
+							<li><a href="deviscont/modifierDeviscont">Modifier un Devis</a></li>
+							<li><a href="deviscont/listedeDevis">Liste de devis</a></li>
+							<li><a href="deviscont/supprimerDevis">Supprimer un devis </a></li>
+							
+							
 						</ul>
 					</li>
-					<li>
-						<a href="gmap.html">
-							<i class="ion ion-map"></i>
-							<span class="text">Maps</span>
-						</a>
-					</li>
-					<li class="active">
-						<a href="tables.html">
-							<i class="ion ion-clipboard"></i>
-							<span class="text">Tables</span>
-						</a>
-					</li>
-					<li>
+                    <li>
 						<a href="javascript:;">
-							<i class="ion ion-printer"></i>
-							<span class="text">Pages</span>
+							<i class="ion ion-android-options"></i>
+							<span class="text">Depense</span>
 							<i class="arrow ion-chevron-left"></i>
+
 						</a>
 						<ul class="inner-drop list-unstyled">
-							<li><a href="pages.signin.html">Sign In</a></li>
-							<li><a href="pages.signup.html">Sign Up</a></li>
-							<li><a href="pages.forget-pass.html">Forget Pass</a></li>
-							<li><a href="pages.404.html">404</a></li>
-							<li><a href="pages.lockscreen.html">Lock Screen</a></li>
-							<li><a href="pages.timeline.html">Timeline</a></li>
-							<li><a href="pages.search.html">Search</a></li>
-							<li><a href="pages.invoice.html">Invoice</a></li>
+							<li><a href="ui.buttons.html">Gestion de depense</a></li>
+							<li><a href="ui.typography.html">Rapport depense/recette</a></li>
+							<li><a href="ui.typography.html">Imprimer Facture</a></li>
+							
+							
 						</ul>
 					</li>
+					
+					
+					
 				</ul> <!-- #end navigation -->
 			</nav>
 
 			<!-- nav-foot -->
 			<footer class="nav-foot">
-				<p>2015 &copy; <span>MATERIA</span></p>
+				<p>2015 &copy; C.R.M</p>
 			</footer>
 
 		</aside>
@@ -475,29 +441,20 @@
 
 		<!-- content-here -->
 		<div class="content-container" id="content">
+			<!-- dashboard page -->
+			<div class="page page-dashboard">
 
-			<div class="page page-ui-tables">
-				<ol class="breadcrumb breadcrumb-small">
-					<li>Home</li>
-					<li class="active"><a href="#/tables/tables">Tables</a></li>
-				</ol>
+			  <div class="page-wrap">
 
-				<div class="page-wrap">
-					<!-- row -->
-					<div class="row">
-						<!-- Basic Table -->
-						<div class="col-md-12">
-							<div class="panel panel-lined panel-hovered mb20 table-responsive basic-table">
-								<div class="panel-heading">
-									Basic Table 
-									<div class="btn-group btn-group-sm right">
-										<button type="button" class="btn btn-default btable-bordered" data-table-class="table-bordered">Bordered</button>
-										<button type="button" class="btn btn-default btable-striped" data-table-class="table-stiped">Striped</button>
-										<button type="button" class="btn btn-default btable-condensed" data-table-class="table-condensed">Condensed</button>
-										<button type="button" class="btn btn-default btable-hover" data-table-class="table-hover">Hover</button>
-									</div>
-								</div>
+			    <div class="row">
+						<!-- dashboard header -->
+						<div class="col-md-6">
+						  <div class="panel panel-default panel-hovered panel-stacked mb30">
+								<div class="panel-heading">Liste des Clients</div>
 								<div class="panel-body">
+									<form role="form" class="form-horizontal" action="javascript:;"> <!-- form horizontal acts as a row -->
+										<!-- normal control -->
+                                        <div class="panel-body">
 									<table class="table">
 										<thead>
 											<tr>
@@ -597,89 +554,20 @@
 								</div>
 							</div>
 						</div>
+										
 
-						<!-- Data Table -->
-						<div class="col-md-12">
-							<div class="panel panel-lined table-responsive panel-hovered mb20 data-table" style="padding-bottom: 20px">
-								<div class="panel-heading">Data Table</div>
-								<div class="panel-body">
-									<div class="small text-bold left mt5">
-										Show&nbsp;
-										<select class="lengthSelect">
-											<option value="5">5</option>
-											<option value="10" selected>10</option>
-											<option value="20">20</option>
-											<option value="50">50</option>
-										</select> 
-										&nbsp;entries
-									</div>
+					
 
-									<form class="form-horizontal right col-lg-4" action="javascript:;">
-										<input type="text" class="form-control input-sm searchInput" placeholder="Type keyword">
-									</form>
-								</div>
-							<!-- data table -->
-							<table class="table table-bordered table-striped">
-								<thead>
-									<tr>
-										<th>
-											Rendering Engine
-											<div class="th">
-												<i class="fa fa-caret-up icon-up"></i>
-												<i class="fa fa-caret-down icon-down"></i>
-											</div>
-										</th>
-										<th>
-											Browser
-											<div class="th">
-												<i class="fa fa-caret-up icon-up"></i>
-												<i class="fa fa-caret-down icon-down"></i>
-											</div>
-										</th>
-										<th>
-											Platform(s)
-											<div class="th">
-												<i class="fa fa-caret-up icon-up"></i>
-												<i class="fa fa-caret-down icon-down"></i>
-											</div>
-										</th>
-										<th>
-											Engine Version
-											<div class="th">
-												<i class="fa fa-caret-up icon-up"></i>
-												<i class="fa fa-caret-down icon-down"></i>
-											</div>
-										</th>
-										<th>
-											CSS Grade
-											<div class="th">
-												<i class="fa fa-caret-up icon-up"></i>
-												<i class="fa fa-caret-down icon-down"></i>
-											</div>
-										</th>
-									</tr>
-								</thead>
-								<tbody>
-									<!-- data initialize via script, can also be load via ajax -->
-								</tbody>
-							</table>
-							<!-- #end data table -->	
 							
-						</div>
-					</div>	
-						
-						
-					</div>
-					<!-- #end row -->
-				</div> <!-- #end page-wrap -->
-			</div>
-			
 
+				 
+				</div> 
+				<!-- #end page-wrap -->
+			</div>
+			<!-- #end dashboard page -->
 		</div>
-		<!-- #end content-container -->
 
 	</div> <!-- #end main-container -->
-
 
 	<!-- theme settings -->
 	<div class="site-settings clearfix hidden-xs">
@@ -737,24 +625,49 @@
 	
 
 	<!-- Dev only -->
-	<!-- build:remove -->
-     <script src="<?php echo base_url('public/scripts/dev/less.min.js')?>"></script>	
-
-	<!-- /build -->
-
 	<!-- Vendors -->
-	<!-- build:js scripts/vendors.js -->
-        <script src="<?php echo base_url('public/scripts/vendors/jquery.min.js')?>"></script>	
-        <script src="<?php echo base_url('public/scripts/vendors/bootstrap.min.js')?>"></script>	
 
-	<!-- /build -->
- <script src="<?php echo base_url('public/scripts/plugins/screenfull.js')?>"></script>	
- <script src="<?php echo base_url('public/scripts/plugins/perfect-scrollbar.min.js')?>"></script>
-<script src="<?php echo base_url('public/scripts/plugins/waves.min.js')?>"></script>	
- <script src="<?php echo base_url('public/scripts/plugins/jquery.dataTables.min.js')?>"></script>
-	<script src="<?php echo base_url('public/scripts/app.js')?>"></script>	
- <script src="<?php echo base_url('public/scripts/tables.init.js')?>"></script>
 	
 	
+
+<script src="<?php echo base_url('public/scripts/vendors.js')?>"></script>	
+<script src="<?php echo base_url('public/scripts/plugins/d3.min.js')?>"></script>
+<script src="<?php echo base_url('scripts/plugins/c3.min.js')?>"></script>
+<script src="<?php echo base_url('public/scripts/plugins/screenfull.js')?>"></script>
+<script src="<?php echo base_url('public/scripts/plugins/perfect-scrollbar.min.js')?>"></script>
+<script src="<?php echo base_url('public/scripts/plugins/waves.min.js')?>"></script>
+<script src="<?php echo base_url('public/scripts/plugins/jquery.sparkline.min.js')?>"></script> 
+<script src="<?php echo base_url('public/scripts/plugins/jquery.easypiechart.min.js')?>"></script>
+<script src="<?php echo base_url('public/scripts/plugins/bootstrap-rating.min.js')?>"></script>
+<script src="<?php echo base_url('public/scripts/app.js')?>"></script>
+<script src="<?php echo base_url('public/scripts/index.init.js')?>"></script>
+<script>
+$("#submitForm").click(function(){
+	
+	
+	var nomc= $("#nom").val();
+	var prenomc= $("#prenom").val();
+	var adressec= $("#adresse").val();
+	var numeroc= $("#numero").val();
+	var code_tvac= $("#code_tva").val();
+	var matricule_fiscalec= $("#matricule_fiscale").val();
+	//var urlStr = "ajouter1.php?id="+id+"&nom="+nom+"&prenom="+prenom+"&adresse="+adresse+"&numero="+numero;
+	$.ajax({
+		type: "POST",
+		url: "ajoutClient",
+		data: {nom:nomc,prenom:prenomc,adresse:adressec,numero:numeroc,code_tva:code_tvac,matricule_fiscale:matricule_fiscalec},
+		success: function(resp)
+		{
+			if(resp=="add.success"){
+			   $("#alert_msg").show();
+			}
+		},
+		error: function(x)
+		{
+			alert( "Erreur: " + x);
+		}
+	});
+});
+</script>
 </body>
 </html>

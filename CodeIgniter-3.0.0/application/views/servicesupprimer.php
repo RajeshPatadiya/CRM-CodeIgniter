@@ -599,12 +599,12 @@
 $("#submitForm").click(function(){
 	
 	
-	var nomc= $("#id_service").val();
+	var id_service= $("#id_service").val();
 	
 	//var urlStr = "ajouter1.php?id="+id+"&nom="+nom+"&prenom="+prenom+"&adresse="+adresse+"&numero="+numero;
 	$.ajax({
 		type: "POST",
-		url: "ajoutClient",
+		url: "supprimerService",
 		data: {id_service:id_service},
 		success: function(resp)
 		{

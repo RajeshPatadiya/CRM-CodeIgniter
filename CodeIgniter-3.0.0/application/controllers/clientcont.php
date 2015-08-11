@@ -60,13 +60,14 @@ $this->load->view('clientajouter.php');
          $this->client->modifierClient($id_client,$nom,$prenom,$adresse,$numero,$code_tva,$matricule_fiscale);
 	  
   }
+  
    function supprimerClient()
    {
 	    $this->load->view('clientsupprimer');
 		
 		$id_client=$this->input->post('id_client');
 		 $this->load->model('client');
-	 $this->service->supprimerClient($id_client);
+	 $this->client->supprimerClient($id_client);
 
    }
    

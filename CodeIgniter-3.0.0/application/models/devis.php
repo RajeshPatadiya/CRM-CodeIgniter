@@ -13,42 +13,31 @@ class DEVIS extends CI_Model
         $results = $query->result();
     }
     return $results;
-		
-		/*$this->load->database();
-		
-		//$query = $this->db->query("SELECT * FROM SERVICE");
-		$query = $this->db->get('devis');
-		//$ligne = array();
 
-if ($ligne=$query->num_rows() > 0)
-{
-   $row = $query->row_array(); 
-
-  $id_devis = $ligne['id_devis']; 
-  $date_envoie = $ligne['date_envoie']; 
-  $date_validation= $ligne['date_validation']; 
-}
- return $ligne;*/
 }
 
-	public function ajouterDevis($date_envoie,$date_validation)
+	public function ajouterDevis($id_client,$date_envoie,$date_validation)
 	{
 		 
 		$this->load->database();
 		
+		   $data["id_client"]=$id_client;
 		   $data["date_envoie"]=$date_envoie;
 		   $data["date_validation"]=$date_validation;
 		   
 		
          $this->db->insert('devis',$data); 
+		 echo"add.success";
 
  
 	}
-	public function modifierDevis($id_devis,$date_envoie,$date_validation)
+	public function modifierDevis($id_devis,$id_client,$date_envoie,$date_validation)
 	{
           $this->load->database();
 		
 		$data = array(
+		       'id_devis' => $id_devis,
+		       'id_client' => $id_client,
                'date_envoie' => $date_envoie,
                'date_validation' => $date_validation,
                
@@ -57,7 +46,8 @@ if ($ligne=$query->num_rows() > 0)
 $this->db->where('id_devis', $id_devis);
 $this->db->update('devis', $data);
 		
-		
+				 echo"modify.success";
+
 
  
 	}
@@ -69,28 +59,9 @@ $this->db->update('devis', $data);
 $this->db->where('id_devis', $id_devis);
 $this->db->delete('devis');
  
+ 				 echo"sup.success";
+
 	}
 	
-
-	
-
-	
-		/*$this->load->database();
-		
-		$data["id_client"]=$id_client;
-		$data["nom"]=$nom;
-		$data["prenom"]=$prenom;
-		$data["adresse"]=$adresse;
-		$data["numero"]=$numero;
-		$data["code_tva"]=$code_tva;
-		$data["matricule_fiscale"]=$matricule_fiscale;
-		
-$this->db->insert('client',$data); 
-//$res=$this->db->simple_query("insert into client values ($this->id_client ,'$this->nom' , '$this->prenom' , '$this->adresse' , $this->tel )"); 
-//if ( $res== TRUE ) echo "client ajouté"; 
-//else echo "client non ajouté"; */
-
-
-
 }
 ?>

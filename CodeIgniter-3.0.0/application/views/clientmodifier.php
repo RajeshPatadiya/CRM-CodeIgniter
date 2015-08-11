@@ -547,7 +547,7 @@
 										<button type="button" class="close" data-dismiss="alert">
 											<span aria-hidden="true">×</span>
 										</button>
-										<div>ajout client avec succées </div>
+										<div>client modifié </div>
 									</div>
                         </div>
 				  </div> <!-- #end row -->

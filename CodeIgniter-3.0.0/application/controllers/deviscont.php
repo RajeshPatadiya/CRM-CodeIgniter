@@ -6,6 +6,7 @@ class DEVISCONT extends CI_Controller {
  {
    parent::__construct();
  }
+ 
  function listedeDevis()
    {
 	    $this->load->model('devis');
@@ -27,16 +28,17 @@ class DEVISCONT extends CI_Controller {
 
  function ajoutDevis()
  {
-	
-	 
 	  $this->load->view('ajoutdevis');
-	 
+	 	 $this->load->model('devis');
+
+        $id_client=$this->input->post('id_client');
         $date_envoie=$this->input->post('date_envoie');
         $date_validation=$this->input->post('date_validation');
 		
-            $this->load->model('devis');
     
-         $this->devis->ajouterDevis($date_envoie,$date_validation);
+         $this->devis->ajouterDevis($id_client,$date_envoie,$date_validation);
+		 
+
 
  }
   function modifierDeviscont()
@@ -44,6 +46,7 @@ class DEVISCONT extends CI_Controller {
 	     $this->load->view('modifierdevis');
 		 
 		 $id_devis=$this->input->post('id_devis');
+		 $id_client=$this->input->post('id_client');
 	    $date_envoie=$this->input->post('date_envoie');
         $date_validation=$this->input->post('date_validation');
 		
@@ -51,7 +54,7 @@ class DEVISCONT extends CI_Controller {
 
           $this->load->model('devis');
     
-         $this->devis->modifierDevis($id_devis,$date_envoie,$date_validation);
+         $this->devis->modifierDevis($id_devis,$id_client,$date_envoie,$date_validation);
 	  
   }
    function supprimerDevis()

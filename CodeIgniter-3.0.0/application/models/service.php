@@ -64,10 +64,17 @@ $this->db->update('service', $data);
 	
 	public function supprimerService($id_service)
 	{
-		$data["id_service"]=$id_service;
-		
-$this->db->where('id_service', $id_service);
+		 $this->load->database();
+		 $data["id_service"]=$id_service;
+		 
+		 $this->db->where('id_service', $id_service);
 $this->db->delete('service');
+		 //$this->db->delete('service', array('id_service' => $id_service)); 
+		echo"sup.success";
+		
+		
+
+
  
 	}
 	
