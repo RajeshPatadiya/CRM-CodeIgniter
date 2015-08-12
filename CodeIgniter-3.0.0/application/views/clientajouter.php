@@ -447,6 +447,7 @@
 			  <div class="page-wrap">
 
 			    <div class="row">
+                
 						<!-- dashboard header -->
 						<div class="col-md-6">
 						  <div class="panel panel-default panel-hovered panel-stacked mb30">

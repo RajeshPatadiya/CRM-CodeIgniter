@@ -19,7 +19,7 @@ class DEVIS extends CI_Model
 	public function ajouterDevis($id_client,$date_envoie,$date_validation)
 	{
 		 
-		$this->load->database();
+		   $this->load->database();
 		
 		   $data["id_client"]=$id_client;
 		   $data["date_envoie"]=$date_envoie;

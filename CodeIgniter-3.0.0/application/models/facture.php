@@ -14,25 +14,6 @@ class FACTURE extends CI_Model
         $results = $query->result();
     }
     return $results;
-		
-		
-		/*$this->load->database();
-		
-		//$query = $this->db->query("SELECT * FROM SERVICE");
-		$query = $this->db->get('facture');
-		//$ligne = array();
-
-if ($ligne=$query->num_rows() > 0)
-{
-   $row = $query->row_array(); 
-
-  $id_facture = $ligne['id_facture']; 
-  $nom_facture = $ligne['nom_facture']; 
-  $date_facture= $ligne['date_facture'];
-  $remise= $ligne['remise'];
-  $prix_tva= $ligne['prix_tva']; 
-}
- return $ligne;*/
 }
 	
 	
@@ -51,11 +32,12 @@ if ($ligne=$query->num_rows() > 0)
 
  
 	}
-	public function modifierFacture($id_facture,$nom_facture,$date_facture,$remise,$prix_tva)
+	public function modifierFacture($id_facture,$id_client,$nom_facture,$date_facture,$remise,$prix_tva)
 	{
           $this->load->database();
 		
 		$data = array(
+		        'id_client' => $id_client,
                'nom_facture' => $nom_facture,
                'date_facture' => $date_facture,
 			   'remise' => $remise,
@@ -67,7 +49,7 @@ $this->db->where('id_facture', $id_facture);
 $this->db->update('facture', $data);
 		
 		
-
+echo"modify.success";
  
 	}
 	
@@ -77,6 +59,7 @@ $this->db->update('facture', $data);
 		
 $this->db->where('id_facture', $id_facture);
 $this->db->delete('facture');
+echo"sup.success";
  
 	}
 	

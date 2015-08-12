@@ -9,7 +9,7 @@
 	<meta name="author" content="solutionportal">
 	<!-- <base href="/"> -->
 
-	<title>Ajouter un client</title>
+	<title>Liste des clients</title>
 	
 	<!-- Icons -->
      <link href="<?php echo base_url('public/fonts/ionicons/css/ionicons.min.css')?>" rel="stylesheet">
@@ -447,123 +447,75 @@
 			  <div class="page-wrap">
 
 			    <div class="row">
-						<!-- dashboard header -->
-						<div class="col-md-6">
-						  <div class="panel panel-default panel-hovered panel-stacked mb30">
-								<div class="panel-heading">Liste des Clients</div>
-								<div class="panel-body">
-									<form role="form" class="form-horizontal" action="javascript:;"> <!-- form horizontal acts as a row -->
-										<!-- normal control -->
-                                        <div class="panel-body">
-									<table class="table">
+                   <table class="table">
 										<thead>
 											<tr>
 												<th class="col-lg-1"><button type="button" class="btn btn-default btn-sm fa fa-trash"></th>
-												<th>Post</th>
-												<th>Author</th>
-												<th>Categories</th>
-												<th>Tags</th>
-												<th class="col-lg-2">Date</th>
-											</tr>
+												<th>ID_Client</th>
+												<th>Nom</th>
+												<th>Prenom</th>
+												<th>Adresse</th>
+												<th>Numero</th>
+                                                <th>Code TVA</th>
+                                                <th>Matricule fiscale</th>
 										</thead>
 										<tbody>
 											<tr>
 												<td>
 													<div class="ui-checkbox ui-checkbox-primary ml5">
-														<label><input type="checkbox"><span></span>
-														</label>
+				  <label><input type="checkbox"><span></span>
+				  </label>
 													</div>
-												</td>
-												<td>My First Blog</td>
-												<td>Johnny</td>
-												<td>Web Design</td>
-												<td>
-													<label class="label label-pink mr5">wordpress</label>
-													<label class="label label-pink mr5">blog</label>
-												</td>
-												<td>20-3-2004</td>
-											</tr>
-											<tr>
-												<td>
-													<div class="ui-checkbox ui-checkbox-primary ml5">
-														<label><input type="checkbox"><span></span>
-														</label>
-													</div>
-												</td>
-												<td>How to Design</td>
-												<td>Jenifer</td>
-												<td>design</td>
-												<td>
-													<label class="label label-primary mr5">photoshop</label>
-													<label class="label label-primary mr5">illustrator</label>
-												</td>
-												<td>2-4-2012</td>
-											</tr>
-											<tr>
-												<td>
-													<div class="ui-checkbox ui-checkbox-primary ml5">
-														<label><input type="checkbox"><span></span>
-														</label>
-													</div>
-												</td>
-												<td>Something is missing</td>
-												<td>Joe</td>
-												<td>uncategorized</td>
-												<td>
-													<label class="label label-success mr5">abc</label>
-													<label class="label label-success mr5">def</label>
-													<label class="label label-success mr5">ghi</label>
-												</td>
-												<td>20-5-2013</td>
-											</tr>
-											<tr>
-												<td>
-													<div class="ui-checkbox ui-checkbox-primary ml5">
-														<label><input type="checkbox"><span></span>
-														</label>
-													</div>
-												</td>
-												<td>Learn a new language</td>
-												<td>Rinky</td>
-												<td>language</td>
-												<td>
-													<label class="label label-danger mr5">C++</label>
-													<label class="label label-danger mr5">Java</label>
-													<label class="label label-danger mr5">PHP</label>
-												</td>
-												<td>10-5-2014</td>
-											</tr>
-											<tr>
-												<td>
-													<div class="ui-checkbox ui-checkbox-primary ml5">
-														<label><input type="checkbox"><span></span>
-														</label>
-													</div>
-												</td>
-												<td>I love singing. Do you?</td>
-												<td>AJ</td>
-												<td>singing</td>
-												<td>
-													<label class="label label-info mr5">music</label>
-												</td>
-												<td>20-10-2014</td>
-											</tr>
-
+                                                      <?php
+ if( !empty($results) ) {
+    foreach($results as $row) {
+        echo '<tr>';
+		echo 	'<td>'.
+													'<div class="ui-checkbox ui-checkbox-primary ml5">'.
+														'<label><input type="checkbox"><span></span>'.
+														'</label>'.
+													'</div>'.
+												'</td>';
+		
+        echo '<td>'.$row->id_client.'</td>';
+        echo '<td>'.$row->nom.'</td>';
+        echo '<td>'.$row->prenom.'</td>';
+        echo '<td>'.$row->adresse.'</td>';
+		 echo '<td>'.$row->numero.'</td>';
+        echo '<td>'.$row->code_tva.'</td>';
+		 echo '<td>'.$row->matricule_fiscale.'</td>';
+        
+        echo '</tr>';
+    }
+}
+?>
+											
+												
+											
 										</tbody>
 									</table>
-								</div>
-							</div>
-						</div>
-										
+             
+						<!-- dashboard header -->
+						<div class="col-md-6">
+                        <div class="alert alert-success" id="alert_msg" style="display:none;">
+										<button type="button" class="close" data-dismiss="alert">
+											<span aria-hidden="true">×</span>
+										</button>
+										<div>ajout client avec succées </div>
+						  </div>
+                </div>
+			  </div> <!-- #end row -->
+
+					
 
 					
 
 							
 
 				 
-				</div> 
+		  </div> 
 				<!-- #end page-wrap -->
-			</div>
+	  </div>
 			<!-- #end dashboard page -->
 		</div>
 

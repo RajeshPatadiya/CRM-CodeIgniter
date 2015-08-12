@@ -400,10 +400,26 @@
 
 						</a>
 						<ul class="inner-drop list-unstyled">
-							<li><a href="deviscont/ajoutDevis">Ajouter un Devis</a></li>
+							<li><a href="deviscont/ajoutDeviscon">Ajouter un Devis</a></li>
 							<li><a href="deviscont/modifierDeviscont">Modifier un Devis</a></li>
 							<li><a href="deviscont/listedeDevis">Liste de devis</a></li>
 							<li><a href="deviscont/supprimerDevis">Supprimer un devis </a></li>
+							
+							
+						</ul>
+					</li>
+                     <li>
+						<a href="javascript:;">
+							<i class="ion ion-android-options"></i>
+							<span class="text">Facture</span>
+							<i class="arrow ion-chevron-left"></i>
+
+						</a>
+						<ul class="inner-drop list-unstyled">
+							<li><a href="facturecont/ajouterFacturecont">Ajouter une facture</a></li>
+							<li><a href="facturecont/modifierFacturecont">Modifier une Facture</a></li>
+							<li><a href="facturecont/listedeFacture">Liste des factures</a></li>
+							<li><a href="facturecont/supprimerFacture">Supprimer une facture </a></li>
 							
 							
 						</ul>

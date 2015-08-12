@@ -30,7 +30,7 @@ function listedeFacture()
 
 
 
- function ajoutFacture()
+ function ajouterFacturecont()
  {
 	
 	 
@@ -52,6 +52,7 @@ function listedeFacture()
 	     $this->load->view('modifierfacture');
 		 
 		 $id_facture=$this->input->post('id_facture');
+		 $id_client=$this->input->post('id_client');
 	    $nom_facture=$this->input->post('nom_facture');
 		 $date_facture=$this->input->post('date_facture');
         $remise=$this->input->post('remise');
@@ -61,7 +62,7 @@ function listedeFacture()
 
           $this->load->model('facture');
     
-         $this->facture->modifierFacture($id_facture,$nom_facture,$date_facture,$remise,$prix_tva);
+         $this->facture->modifierFacture($id_facture,$id_client,$nom_facture,$date_facture,$remise,$prix_tva);
 	  
   }
    function supprimerFacture()

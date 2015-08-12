@@ -26,7 +26,7 @@ class DEVISCONT extends CI_Controller {
 	   
    }
 
- function ajoutDevis()
+ function ajoutDeviscon()
  {
 	  $this->load->view('ajoutdevis');
 	 	 $this->load->model('devis');
