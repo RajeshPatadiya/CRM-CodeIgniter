@@ -447,14 +447,23 @@
 			  <div class="page-wrap">
 
 			    <div class="row">
-						<!-- dashboard header -->
-						<div class="col-md-6">
-						  <div class="panel panel-default panel-hovered panel-stacked mb30">
-								<div class="panel-heading">Ajouter un Devis</div>
-                                <!-- native select -->
+                
+
+								
+								
+								<p 	<div class="form-group">
+											<label class="col-md-3 control-label">Devis N° :</label>
+											<div class="col-md-3">
+												<input type="text" class="form-control" name="nom" id="nom">
+											</div>
+										</div>
+
+ <!-- native select --><br>
+<br>
+
 										<div class="form-group">
 											<label class="col-md-3 control-label">Clients</label>
-											<div class="col-md-9">
+											<div class="col-md-3">
 												<select class="form-control" name="id_client" id="id_client">
 													
 													<option value="1">marwa</option>
@@ -465,61 +474,57 @@
 												</select>
 											</div>
 										</div>
+                                        <br>
+<br>
+
+	<div class="clearfix right">
+											<button class="btn btn-primary mr5 waves-effect" type="submit" id="submitForm" onClick="showform()">+</button>
 										
-								<div class="panel-body">
-									<form role="form" class="form-horizontal" action="javascript:;"> <!-- form horizontal acts as a row -->
-										<!-- normal control -->
-										<div class="form-group">
-											<label class="col-md-3 control-label">Date d'envoie :</label>
-											<div class="col-md-9">
-												<input type="text" class="form-control" name="date_envoie" id="date_envoie">
-											</div>
 										</div>
+
+                                       
+                                        <br>
+
+<br>
+
                                         
-                                        <div class="form-group">
-											<label class="col-md-3 control-label">Date de validation:</label>
-											<div class="col-md-9">
-												<input type="text" class="form-control" name="date_validation" id="date_validation">
-											</div>
-										</div>
-                                         
-										<!-- textarea control -->
-										<div class="form-group">
-											<label class="col-md-3 control-label">Textarea</label>
-											<div class="col-md-9">
-												<textarea rows="5" class="form-control resize-v" placeholder="Message ici"></textarea>
-											</div>
-										</div>
+								<!-- invoice table -->
+								<table class="table table-bordered invoice-table mb30" name="tableau" id="tableau">
+									<thead>
+										<tr>
+											<th>Service</th>
+											<th>Quantite</th>
+											<th>Prix HT</th>
+											<th>Total</th>
+										</tr>
+									</thead>
+
+									<tbody>
 										
-										<!-- button addon -->
-										<div class="form-group">
-	
-											<div class="col-md-9">
-											  <div class="input-group">
-												<div class="input-group-btn">
-														
-												  </div>
-												</div>
-											</div>	
-										</div>
-										
-										<div class="clearfix right">
-											<button class="btn btn-primary mr5 waves-effect" type="submit" id="submitForm">Ajouter</button>
-											<button class="btn btn-default waves-effect">Cancel</button>
-										</div>
-									</form>
+									</tbody>
+								</table>
+								<!-- #end invoice table -->
+
+
+								<div class="clearfix text-right total-sum mb30">
+									<h3 class="text-uppercase text-bold">Total</h3>
+									
 								</div>
+							
+
 							</div>
-						</div>
-                        <div class="col-md-6">
-                        <div class="alert alert-success" id="alert_msg" style="display:none;">
-										<button type="button" class="close" data-dismiss="alert">
-											<span aria-hidden="true">×</span>
-										</button>
-										<div>ajout devis avec succées </div>
-									</div>
-                        </div>
-				  </div> <!-- #end row -->
+
+						</div> <!-- Invoice End -->
+					</div> <!-- #end row -->
+
+				</div> <!-- #end page-wrap -->
+
+			</div>
+
+		</div> 
+		<!-- #end content-here -->
+
+	</div> <!-- #end main-container -->
 
 					
 
@@ -535,6 +540,65 @@
 		</div>
 
 	</div> <!-- #end main-container -->
+    
+    
+    <!-- dashboard header -->
+						<div class="col-md-12" id="formul" style="display:none;">
+						  <div class="panel panel-default panel-hovered panel-stacked mb30">
+								<div class="panel-heading">Ajouter un devis</div>
+								<div class="panel-body">
+									<form role="form" class="form-horizontal" action="javascript:;"> <!-- form horizontal acts as a row -->
+										<!-- normal control -->
+										<div class="form-group">
+											<label class="col-md-3 control-label">Service:</label>
+											<div class="col-md-9">
+												<input type="text" class="form-control" name="service" id="service">
+											</div>
+										</div>
+                                        
+                                        <div class="form-group">
+											<label class="col-md-3 control-label">Prix:</label>
+											<div class="col-md-9">
+												<input type="text" class="form-control" name="prix" id="prix">
+											</div>
+										</div>
+                                          <div class="form-group">
+											<label class="col-md-3 control-label">Quantite:</label>
+											<div class="col-md-9">
+												<input type="text" class="form-control" name="qte" id="qte">
+											</div>
+										</div>
+                                         
+
+										<!-- button addon -->
+										<div class="form-group">
+	
+											<div class="col-md-9">
+											  <div class="input-group">
+												<div class="input-group-btn">
+														
+												  </div>
+												</div>
+											</div>	
+										</div>
+										
+										<div class="clearfix right">
+											<button class="btn btn-primary mr5 waves-effect" type="submit" id="submitForm" onClick="ajouter(document.getElementById('tableau'), document.getElementById('service').value, document.getElementById('prix').value, document.getElementById('qte').value);">OK</button>
+											<button class="btn btn-default waves-effect">Cancel</button>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+                      
+					
+
+					
+
+							
+
+				 
+				</div> 
 
 	<!-- theme settings -->
 	<div class="site-settings clearfix hidden-xs">
@@ -596,7 +660,6 @@
 
 	
 	
-
 <script src="<?php echo base_url('public/scripts/vendors.js')?>"></script>	
 <script src="<?php echo base_url('public/scripts/plugins/d3.min.js')?>"></script>
 <script src="<?php echo base_url('scripts/plugins/c3.min.js')?>"></script>
@@ -608,30 +671,50 @@
 <script src="<?php echo base_url('public/scripts/plugins/bootstrap-rating.min.js')?>"></script>
 <script src="<?php echo base_url('public/scripts/app.js')?>"></script>
 <script src="<?php echo base_url('public/scripts/index.init.js')?>"></script>
-<script>
-$("#submitForm").click(function(){
-	
-	var id_client= $("#id_client").val();
-	var date_envoie= $("#date_envoie").val();
-	var date_validation= $("#date_validation").val();
-	
-	//var urlStr = "ajouter1.php?id="+id+"&nom="+nom+"&prenom="+prenom+"&adresse="+adresse+"&numero="+numero;
-	$.ajax({
-		type: "POST",
-		url: "ajoutDeviscon",
-		data: {id_client:id_client,date_envoie:date_envoie,date_validation:date_validation},
-		success: function(resp)
-		{
-			if(resp=="add.success"){
-			   $("#alert_msg").show();
-			}
-		},
-		error: function(x)
-		{
-			alert( "Erreur: " + x);
-		}
-	});
-});
-</script>
+
+<script src="<?php echo base_url('public/scripts/vendors/jquery.min.js')?>"></script>
+<script src="<?php echo base_url('public/scripts/vendors/bootstrap.min.js')?>"></script>
+<script src="<?php echo base_url('public/scripts/dev/less.min.js')?>"></script>
+
 </body>
 </html>
+<script>
+function showform()
+{
+ $("#formul").show();
+}
+function ajouter(elmt, value1,value2,value3) {
+	/*var service=document.getElementById(service).value; 
+	var prix=document.getElementById(prix).value;
+	var qte=document.getElementById(qte).value;*/
+	
+
+
+
+    var tr = document.createElement('tr');
+    elmt.appendChild(tr);
+   // for (var i = 0; i < 100; i++) {
+    var td = document.createElement('td');
+    tr.appendChild(td);
+    var tdText = document.createTextNode(value1);
+    td.appendChild(tdText);
+	 var td = document.createElement('td');
+    tr.appendChild(td);
+	 var tdText = document.createTextNode(value2);
+    td.appendChild(tdText);
+	 var td = document.createElement('td');
+    tr.appendChild(td);
+	 var tdText = document.createTextNode(value3);
+    td.appendChild(tdText);
+	
+	
+	
+	
+		
+/*var addr=new table(service,prix,qte);
+		form.table.table[form.table.table.length]=addr;*/
+	}
+	function totale()
+	{
+	}
+</script>

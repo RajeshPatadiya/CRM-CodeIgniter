@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -32,7 +34,49 @@
 
 	<!-- Match Media polyfill for IE9 -->
 	<!--[if IE 9]> <script src="scripts/ie/matchMedia.js"></script>  <![endif]--> 
+<script language="javascript">
+var listId = new Array();
+function addId(element){
+	
+	var id = element.id;
+	if(element.checked){
+  			listId.push(id);
+	}else{
+		for(var i=0;i<listId.length;i++){
+		    if(listId[i]==id){
+			  listId.splice(i,1);
+			}
+		}
+	}
+}
+function deleteClient ()
+{
+	var param="";
+	for (var  i=0;i<listId.length;i++){
+		var id=listId[i];
+		 param=param+"id_client[]="+id+"&";
+	
+	}
+	
+	$.ajax({
+		type: "GET",
+		url: "supprimerClient?"+param,
+		success: function(resp)
+		{
+			if(resp=="sup.success"){
+			   //$("#alert_msg").show();
+			   window.location.href="./listedeClient";
+			}
+		},
+		error: function(x)
+		{
+			alert( "Erreur: " + x);
+		}
+	});
+	
+}
 
+</script>
 	
 </head>
 <body id="app" class="app off-canvas">
@@ -447,32 +491,35 @@
 			  <div class="page-wrap">
 
 			    <div class="row">
+                <div class="col-md-12">
+                <div class="panel panel-lined panel-hovered mb20 table-responsive basic-table">
+                <div class="panel-heading">
+									Client List 
+								
+								</div>
                    <table class="table">
 										<thead>
 											<tr>
-												<th class="col-lg-1"><button type="button" class="btn btn-default btn-sm fa fa-trash"></th>
+												<th class="col-lg-1"><button type="button" class="btn btn-default btn-sm fa fa-trash" onClick=" deleteClient();"> </button></th>
 												<th>ID_Client</th>
-												<th>Nom</th>
+												<th>Nom </th>
 												<th>Prenom</th>
-												<th>Adresse</th>
-												<th>Numero</th>
-                                                <th>Code TVA</th>
-                                                <th>Matricule fiscale</th>
+                                                <th>adresse </th>
+												<th>code TVA</th>
+                                                <th>matricule fiscale</th>
+												</tr>
 										</thead>
 										<tbody>
-											<tr>
-												<td>
-													<div class="ui-checkbox ui-checkbox-primary ml5">
-				  <label><input type="checkbox"><span></span>
-				  </label>
-													</div>
-                                                      <?php
+					                               
+
+
+<?php
  if( !empty($results) ) {
     foreach($results as $row) {
         echo '<tr>';
 		echo 	'<td>'.
 													'<div class="ui-checkbox ui-checkbox-primary ml5">'.
-														'<label><input type="checkbox"><span></span>'.
+														'<label><input onclick="addId(this)" id="'.$row->id_client.'" type="checkbox"><span></span>'.
 														'</label>'.
 													'</div>'.
 												'</td>';
@@ -480,11 +527,10 @@
         echo '<td>'.$row->id_client.'</td>';
         echo '<td>'.$row->nom.'</td>';
         echo '<td>'.$row->prenom.'</td>';
-        echo '<td>'.$row->adresse.'</td>';
-		 echo '<td>'.$row->numero.'</td>';
-        echo '<td>'.$row->code_tva.'</td>';
-		 echo '<td>'.$row->matricule_fiscale.'</td>';
-        
+		echo '<td>'.$row->adresse.'</td>';
+		echo '<td>'.$row->code_tva.'</td>';
+		echo '<td>'.$row->matricule_fiscale.'</td>';
+      
         echo '</tr>';
     }
 }
@@ -494,16 +540,10 @@
 											
 										</tbody>
 									</table>
-             
+            </div>
+             </div>
 						<!-- dashboard header -->
-						<div class="col-md-6">
-                        <div class="alert alert-success" id="alert_msg" style="display:none;">
-										<button type="button" class="close" data-dismiss="alert">
-											<span aria-hidden="true">×</span>
-										</button>
-										<div>ajout client avec succées </div>
-						  </div>
-                </div>
+						
 			  </div> <!-- #end row -->
 
 					
@@ -583,43 +623,13 @@
 	
 
 <script src="<?php echo base_url('public/scripts/vendors.js')?>"></script>	
-<script src="<?php echo base_url('public/scripts/plugins/d3.min.js')?>"></script>
-<script src="<?php echo base_url('scripts/plugins/c3.min.js')?>"></script>
 <script src="<?php echo base_url('public/scripts/plugins/screenfull.js')?>"></script>
 <script src="<?php echo base_url('public/scripts/plugins/perfect-scrollbar.min.js')?>"></script>
 <script src="<?php echo base_url('public/scripts/plugins/waves.min.js')?>"></script>
-<script src="<?php echo base_url('public/scripts/plugins/jquery.sparkline.min.js')?>"></script> 
-<script src="<?php echo base_url('public/scripts/plugins/jquery.easypiechart.min.js')?>"></script>
-<script src="<?php echo base_url('public/scripts/plugins/bootstrap-rating.min.js')?>"></script>
+<script src="<?php echo base_url('public/scripts/plugins/jquery.dataTables.min.js')?>"></script>
 <script src="<?php echo base_url('public/scripts/app.js')?>"></script>
-<script src="<?php echo base_url('public/scripts/index.init.js')?>"></script>
-<script>
-$("#submitForm").click(function(){
-	
-	
-	var nomc= $("#nom").val();
-	var prenomc= $("#prenom").val();
-	var adressec= $("#adresse").val();
-	var numeroc= $("#numero").val();
-	var code_tvac= $("#code_tva").val();
-	var matricule_fiscalec= $("#matricule_fiscale").val();
-	//var urlStr = "ajouter1.php?id="+id+"&nom="+nom+"&prenom="+prenom+"&adresse="+adresse+"&numero="+numero;
-	$.ajax({
-		type: "POST",
-		url: "ajoutClient",
-		data: {nom:nomc,prenom:prenomc,adresse:adressec,numero:numeroc,code_tva:code_tvac,matricule_fiscale:matricule_fiscalec},
-		success: function(resp)
-		{
-			if(resp=="add.success"){
-			   $("#alert_msg").show();
-			}
-		},
-		error: function(x)
-		{
-			alert( "Erreur: " + x);
-		}
-	});
-});
-</script>
+<script src="<?php echo base_url('public/scripts/tables.init.js')?>"></script>
+
+
 </body>
 </html>

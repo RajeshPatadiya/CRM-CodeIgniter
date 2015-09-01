@@ -15,15 +15,7 @@ function listedeService()
 
    
     $this->load->view('serviceliste', $data);
-  
-	
-	    $this->load->model('service');
-	    $data['serviceliste'] = $this->service->listeService();
-    $this->load->view('serviceliste', $data);
-	  /* $this->load->model('service');
-	   $tab= $this->service->listeService();
-	   echo $tab;*/
-	   
+    
    }
 
 
@@ -58,12 +50,14 @@ function listedeService()
 	  
   }
    function supprimerService()
-   {
-	    $this->load->view('servicesupprimer');
-		
-		$id_service=$this->input->post('id_service');
+   {    $id_service = array();
+        
+		$id_service=$this->input->get('id_service');
+		foreach($id_service as $k=>$v){
 		 $this->load->model('service');
-	 $this->service->supprimerService($id_service);
+		 $this->service->supprimerService($v);
+		}
+		echo"sup.success";
 
    }
    

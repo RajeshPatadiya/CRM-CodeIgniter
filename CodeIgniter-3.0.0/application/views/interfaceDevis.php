@@ -9,7 +9,7 @@
 	<meta name="author" content="solutionportal">
 	<!-- <base href="/"> -->
 
-	<title>Ajouter un devis</title>
+	<title>Ajouter un client</title>
 	
 	<!-- Icons -->
      <link href="<?php echo base_url('public/fonts/ionicons/css/ionicons.min.css')?>" rel="stylesheet">
@@ -447,50 +447,35 @@
 			  <div class="page-wrap">
 
 			    <div class="row">
+                
 						<!-- dashboard header -->
 						<div class="col-md-6">
 						  <div class="panel panel-default panel-hovered panel-stacked mb30">
-								<div class="panel-heading">Ajouter un Devis</div>
-                                <!-- native select -->
-										<div class="form-group">
-											<label class="col-md-3 control-label">Clients</label>
-											<div class="col-md-9">
-												<select class="form-control" name="id_client" id="id_client">
-													
-													<option value="1">marwa</option>
-													<option value="2">ahmed</option>
-													<option value="3">salah</option>
-													<option value="4">yassmine</option>
-													<option value="5">nour</option>
-												</select>
-											</div>
-										</div>
-										
+								<div class="panel-heading">Ajouter un devis</div>
 								<div class="panel-body">
 									<form role="form" class="form-horizontal" action="javascript:;"> <!-- form horizontal acts as a row -->
 										<!-- normal control -->
 										<div class="form-group">
-											<label class="col-md-3 control-label">Date d'envoie :</label>
+											<label class="col-md-3 control-label">Service:</label>
 											<div class="col-md-9">
-												<input type="text" class="form-control" name="date_envoie" id="date_envoie">
+												<input type="text" class="form-control" name="service" id="service">
 											</div>
 										</div>
                                         
                                         <div class="form-group">
-											<label class="col-md-3 control-label">Date de validation:</label>
+											<label class="col-md-3 control-label">Prix:</label>
 											<div class="col-md-9">
-												<input type="text" class="form-control" name="date_validation" id="date_validation">
+												<input type="text" class="form-control" name="prix" id="prix">
+											</div>
+										</div>
+                                          <div class="form-group">
+											<label class="col-md-3 control-label">Quantite:</label>
+											<div class="col-md-9">
+												<input type="text" class="form-control" name="qte" id="qte">
 											</div>
 										</div>
                                          
-										<!-- textarea control -->
-										<div class="form-group">
-											<label class="col-md-3 control-label">Textarea</label>
-											<div class="col-md-9">
-												<textarea rows="5" class="form-control resize-v" placeholder="Message ici"></textarea>
-											</div>
-										</div>
-										
+
 										<!-- button addon -->
 										<div class="form-group">
 	
@@ -504,23 +489,14 @@
 										</div>
 										
 										<div class="clearfix right">
-											<button class="btn btn-primary mr5 waves-effect" type="submit" id="submitForm">Ajouter</button>
+											<button class="btn btn-primary mr5 waves-effect" type="submit" id="submitForm">OK</button>
 											<button class="btn btn-default waves-effect">Cancel</button>
 										</div>
 									</form>
 								</div>
 							</div>
 						</div>
-                        <div class="col-md-6">
-                        <div class="alert alert-success" id="alert_msg" style="display:none;">
-										<button type="button" class="close" data-dismiss="alert">
-											<span aria-hidden="true">×</span>
-										</button>
-										<div>ajout devis avec succées </div>
-									</div>
-                        </div>
-				  </div> <!-- #end row -->
-
+                      
 					
 
 					
@@ -596,7 +572,6 @@
 
 	
 	
-
 <script src="<?php echo base_url('public/scripts/vendors.js')?>"></script>	
 <script src="<?php echo base_url('public/scripts/plugins/d3.min.js')?>"></script>
 <script src="<?php echo base_url('scripts/plugins/c3.min.js')?>"></script>
@@ -611,27 +586,15 @@
 <script>
 $("#submitForm").click(function(){
 	
-	var id_client= $("#id_client").val();
-	var date_envoie= $("#date_envoie").val();
-	var date_validation= $("#date_validation").val();
 	
-	//var urlStr = "ajouter1.php?id="+id+"&nom="+nom+"&prenom="+prenom+"&adresse="+adresse+"&numero="+numero;
-	$.ajax({
-		type: "POST",
-		url: "ajoutDeviscon",
-		data: {id_client:id_client,date_envoie:date_envoie,date_validation:date_validation},
-		success: function(resp)
-		{
-			if(resp=="add.success"){
-			   $("#alert_msg").show();
-			}
-		},
-		error: function(x)
-		{
-			alert( "Erreur: " + x);
-		}
-	});
-});
+	var service= $("#service").val();
+	var prix= $("#prix").val();
+	var qte= $("#qte").val();
+	
+		function Ajouter(form) {
+		var o=new table(form.service.value,form.prix.value,form.qte.value);
+		form.table.table[form.table.table.length]=o;
+	}
 </script>
 </body>
 </html>

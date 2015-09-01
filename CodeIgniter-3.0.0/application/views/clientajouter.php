@@ -36,6 +36,7 @@
 	
 </head>
 <body id="app" class="app off-canvas">
+<!-- #include file="dashboard.htm" --> 
 	
 	<!-- header -->
 	<header class="site-head" id="site-head">
